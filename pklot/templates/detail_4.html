@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/detail.css' %}" type="text/css">
+{% endblock %}
+
 {% block nav %}
   <ul>
     <li class="item">
@@ -56,9 +60,6 @@
 
 {% block content %}
 
-  <h1>여기는 제 4구역입니다.
-  </h1>
-
-  {{image}}
+  <h1>this is detail.html</h1>
 
 {% endblock %}

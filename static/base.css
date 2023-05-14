@@ -11,12 +11,12 @@ html {
 
 .header {
   /* background-color: aqua; */
-  height: 10vh;
+  height: 15vh;
   border-bottom: 3px solid #9f9b9b;
 }
 .body {
   /* background-color: beige; */
-  height: 90vh;
+  height: 85vh;
 
   display: flex;
   flex-direction: row;
@@ -74,33 +74,10 @@ h1 {
   /* border: 2px solid black; */
 }
 
-.item > ul {
-  /* border: 1px solid black; */
-  display: none;
-}
-
-.item:hover > ul {
-  display: block;
-}
-
-.item {
-  text-align: center;
-  /* border: 1px solid black; */
-  margin-bottom: 20px;
-  margin-top: 10px;
-
-  font-family: "NanumSquare Neo";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
-  text-align: center;
-  letter-spacing: 0.05em;
-}
-ul {
-  padding: 0%;
-  list-style: none;
-}
-ul > li {
-  text-align: center;
+#static_background {
+  position: relative;
+  width: 1088px;
+  height: 700px;
+  left: 7%;
+  top: 10%;
 }
