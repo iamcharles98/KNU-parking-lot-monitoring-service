@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cover.css' %}" type="text/css"/>
+    <title>Cover</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <img id="logo" src="logo.png">
+      <header id="title">주차현황 캠퍼스 맵</header>
+      <img id="cover" src="{% static 'images/cover.jpeg' %}" style="opacity: 0.7;">
+      <div id="check">
+        <div id="check_text">확인하기</div>
+      </div>
+    </div>
+  </body>
+
+</html>

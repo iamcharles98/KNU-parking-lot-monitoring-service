@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>경북대학교 실시간 주차현황 맵</h1>
+    </div>
+    <div class="body">
+      <div class="nav">
+        <div class="searchform">
+          <form action="">
+            <div class="search-bar input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="건물번호 or 건물명"
+                aria-label="건물번호 or 건물명"
+                aria-describedby="button-addon2"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="category">
+          <ul>
+            <li class="item">
+              📍 1 구역 >
+              <ul>
+                <li>A 구역</li>
+                <li>B 구역</li>
+                <li>C 구역</li>
+                <li>D 구역</li>
+              </ul>
+            </li>
+            <li class="item">
+              📍 2 구역 >
+              <ul>
+                <li>A 구역</li>
+                <li>B 구역</li>
+                <li>C 구역</li>
+                <li>D 구역</li>
+              </ul>
+            </li>
+            <li class="item">
+              📍 3 구역 >
+              <ul>
+                <li>A 구역</li>
+                <li>B 구역</li>
+                <li>C 구역</li>
+                <li>D 구역</li>
+              </ul>
+            </li>
+            <li class="item">
+              📍 4 구역 >
+              <ul>
+                <li>A 구역</li>
+                <li>B 구역</li>
+                <li>C 구역</li>
+                <li>D 구역</li>
+                <li>E 구역</li>
+                <li>F 구역</li>
+                <li>G 구역</li>
+              </ul>
+            </li>
+            <li class="item">
+              📍 5 구역 >
+              <ul>
+                <li>A 구역</li>
+                <li>B 구역</li>
+                <li>C 구역</li>
+                <li>D 구역</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="center">{% block content %}{% endblock %}</div>
+    </div>
+  </body>
+</html>
