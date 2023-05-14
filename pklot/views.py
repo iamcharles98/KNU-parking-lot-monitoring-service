@@ -12,3 +12,18 @@ def home(request):
 def cover(request):
 
     return render(request,"cover.html")
+
+
+def section_4(request):
+    return render(request,'section_4.html')
+
+def section_3(request):
+    return render(request,'section_3.html')
+
+
+def search(request, id):
+    sample = "cover.jpeg"
+    return render(request, 'search.html', {'image': sample,'section':id})
+
+# def section_4(request):
+#     return render(request,'search.html')
