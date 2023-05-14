@@ -12,5 +12,5 @@ urlpatterns = [
     path("section4",views.section_4,name="section_4"),
     # path('', home, name='home'),
     # path('detail/<str:id>',detail, name="detail"),
-    path("search/<str:id>",views.search,name="search")
+    path("temp/<str:id>",views.search,name="search")
 ]

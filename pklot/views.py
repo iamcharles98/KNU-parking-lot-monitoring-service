@@ -23,7 +23,7 @@ def section_3(request):
 
 def search(request, id):
     sample = "cover.jpeg"
-    return render(request, 'search.html', {'image': sample,'section':id})
+    return render(request, 'temp.html', {'image': sample,'section':id})
 
 # def section_4(request):
 #     return render(request,'search.html')
