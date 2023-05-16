@@ -12,8 +12,6 @@ db.sqlite3-journal
 media
 /Users/meeju/Desktop/knu_parking_final/config/my_settings.py
 /Users/meeju/Desktop/knu_parking_final/myvenv
-.idea
-
 
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
