@@ -1,0 +1,6 @@
+/env
+/config/my_settings.py
+/config/settings.py
+/building
+/.idea
+/config
