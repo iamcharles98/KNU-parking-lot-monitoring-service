@@ -17,11 +17,8 @@ def cover(request):
 def section_4(request):
     return render(request,'section_4.html')
 
-def section_3(request):
-    return render(request,'section_3.html')
-
-
-def search(request, id):
+# section 4 가 아닌 구역에 대해서 리턴 되는 함수 
+def temp(request, id):
     sample = "cover.jpeg"
     return render(request, 'temp.html', {'image': sample,'section':id})
 

@@ -8,9 +8,8 @@ urlpatterns = [
 
     path("", views.home),
     path("cover",views.cover),
-    path("section3",views.section_3,name="section_3"),
     path("section4",views.section_4,name="section_4"),
     # path('', home, name='home'),
     # path('detail/<str:id>',detail, name="detail"),
-    path("temp/<str:id>",views.search,name="search")
+    path("temp/<str:id>",views.temp,name="temp")
 ]
