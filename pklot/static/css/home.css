@@ -28,3 +28,42 @@ ul {
 ul > li {
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+#background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../images/background.png);
+
+  /* width: 100%;
+  height: 100%; */
+}
+
+#section_1, #section_2, #section_3, #section_4, #section_5{
+    position: relative;
+}
+
+#section_1 {
+    top: 1%;
+    left: 44.5%;
+}
+
+#section_2 {
+    top: 28%;
+    left: -13.5%;
+}
+#section_3 {
+    top: 27%;
+    left: -8%;
+}
+#section_4 {
+    top: 1%;
+    left: 35%;
+}
+#section_5 {
+    top: 9.5%;
+    left: 3%;
+}
+>>>>>>> 8d1c37e0e234750cdeb8af045f1430b37025a250
