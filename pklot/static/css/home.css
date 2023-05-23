@@ -5,6 +5,7 @@
 
 .item:hover > ul {
   display: block;
+  animation-duration: 5ms;
 }
 
 .item {
@@ -12,8 +13,6 @@
   /* border: 1px solid black; */
   margin-bottom: 20px;
   margin-top: 10px;
-
-  font-family: "NanumSquare Neo";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -22,8 +21,9 @@
   letter-spacing: 0.05em;
 }
 ul {
-  padding: 0%;
+  padding: 10%;
   list-style: none;
+  letter-spacing: 0.05em;
 }
 ul > li {
   text-align: center;
@@ -44,7 +44,4 @@ ul > li {
   opacity: 0.7;
   position: relative;
   left: 44.5%;
-}
-
-#root {
 }
