@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block style %}
-  <link rel="stylesheet" href="{% static 'css/detail.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/detail4_G.css' %}" type="text/css">
 {% endblock %}
 
 {% block nav %}
   <ul>
     <li class="item">
-      <a href="{% url 'search' 1 %}">📍 1 구역 ></a>
+      <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
       <ul>
         <li>A 구역</li>
         <li>B 구역</li>
@@ -16,7 +17,7 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'search' 2 %}">📍 2 구역 ></a>
+      <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
       <ul>
         <li>A 구역</li>
         <li>B 구역</li>
@@ -25,7 +26,7 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'section_3' %}">📍 3 구역 ></a>
+      <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
       <ul>
         <li>A 구역</li>
         <li>B 구역</li>
@@ -46,7 +47,8 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'search' 5  %}">📍 5 구역 ></a>
+
+      <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
       <ul>
         <li>A 구역</li>
         <li>B 구역</li>
@@ -59,7 +61,8 @@
 {% endblock %}
 
 {% block content %}
-
-  <h1>this is detail.html</h1>
+  <div id="background">
+    <h3>여기는 4_G 구역입니다.</h3>
+  </div>
 
 {% endblock %}

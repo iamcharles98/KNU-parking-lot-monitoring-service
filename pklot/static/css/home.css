@@ -39,27 +39,31 @@ ul > li {
   height: 100%; */
 }
 
-#section_1, #section_2, #section_3, #section_4, #section_5{
-    position: relative;
+#section_1,
+#section_2,
+#section_3,
+#section_4,
+#section_5 {
+  position: relative;
 }
 
 #section_1 {
-    top: 1%;
-    left: 44.5%;
+  top: 1%;
+  left: 44.5%;
 }
 #section_2 {
-    top: 28%;
-    left: -13.5%;
+  top: 28%;
+  left: -13.5%;
 }
 #section_3 {
-    top: 27%;
-    left: -8%;
+  top: 27%;
+  left: -8%;
 }
 #section_4 {
-    top: 1%;
-    left: 35%;
+  top: 1%;
+  left: 35%;
 }
 #section_5 {
-    top: 9.5%;
-    left: 3%;
+  top: 9.5%;
+  left: 3%;
 }
