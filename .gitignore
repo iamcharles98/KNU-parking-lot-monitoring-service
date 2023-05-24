@@ -166,8 +166,10 @@ pyvenv.cfg
 pip-selfcheck.json
 # 가상환경 무시
 knu_project_venv/
-migrations/
+building/migrations/
+cctv/migrations/
+pklot/migrations/
 # my_settings 무시
 config/my_settings.py
+config/
 # End of https://www.toptal.com/developers/gitignore/api/macos,pycharm,venv
-

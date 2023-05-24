@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # djangorestframework사용을 위해(설치 필요)
-    'pklot.apps.PklotConfig',
+    'pklot',
     'building',
 ]
 

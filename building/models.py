@@ -17,7 +17,7 @@ class Building(models.Model):
         verbose_name_plural = '경북대학교 건물'
 
 class Pk_location(models.Model):
-    building_num = models.ForeignKey(Building, to_field='building_num', on_delete=models.CASCADE)
+    building_num = models.ForeignKey(Building, to_field='building_num', db_column='building_num', on_delete=models.CASCADE)
     pk_area = models.IntegerField(verbose_name='건물에서 주차공간의 번호')
     x = models.FloatField(verbose_name='주차공간의 x 좌표')
     y = models.FloatField(verbose_name='주차공간의 y 좌표')
