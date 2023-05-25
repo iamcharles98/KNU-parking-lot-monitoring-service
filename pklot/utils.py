@@ -4,7 +4,8 @@ from cctv import views
 from building.models import Building, Pk_location
 from pklot.serializers import buildingSerializers, locationSerializers
 from django.core.exceptions import ObjectDoesNotExist
-import math, os
+
+import os
 
 """예외 처리 필요"""
 
@@ -60,7 +61,7 @@ def adjacent_priority_algorithm(result, num):
 
         # label[0] : x, label[1] : y, label[2] : w, label[3] : h
         for label in result:
-            lx, ly, lw, lh = label[0], label[1], label[2], label[3]
+            lx, ly, lw, lh = label[1], label[2], label[3], label[4]
 
             lx_min = lx - lw/2
             lx_max = lx + lw/2
@@ -77,27 +78,33 @@ def adjacent_priority_algorithm(result, num):
                 for point in points:
                     if lx_min < point[0] < lx_max and ly_min < point[1] < ly_max:
                         include.append(pk)
-                        break
 
-            # 포함 되는 주차 구역 중에서 라벨의 밑변과 가장 가까운 구역 찾기 -> y 좌표 이요
-            min_distance = float("inf")
-            result = None
-            for pk in include:
-                y_min = pk.y - pk.h/2
-                distance = math.abs(ly_min - y_min)
+            # 포함된 구역이 없으면 넘어가기
+            if len(include) == 0:
+                continue
+            else:
+                # 포함 되는 주차 구역 중에서 라벨의 밑변과 가장 가까운 구역 찾기 -> y 좌표 이요
+                min_distance = float("inf")
+                area = -1
+                for pk in include:
+                    y_min = pk.y - pk.h/2
+                    distance = abs(ly_min - y_min)
 
-                if distance < min_distance:
-                    min_distance = distance
-                    result = pk
+                    if distance < min_distance:
+                        min_distance = distance
+                        area = pk.pk_area
 
-            # 최종 결과값 넣기
-            result.empty = False
-            update_list.append(result)
+                # 최종 결과값 넣기
+                result = Pk_location.objects.get(pk_area=area, building_num=num)
+                result.empty = False
+                update_list.append(result)
+                print(area)
 
         Pk_location.objects.bulk_update(update_list, ['empty'])
 
     except ObjectDoesNotExist:
-        raise "Object Not Exist"
+        print("Object Not Exist")
+        return
 
 
 def change_file(parking_name):

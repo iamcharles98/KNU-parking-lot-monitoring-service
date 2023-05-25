@@ -43,9 +43,9 @@ def capture_latest_frame(video_path):
 
 
 # 캡쳐한 사진을 주차장 별로 저장하는 기능
-def save_parking_image(parking_name):
-    image_path = os.path.join('YOLO/yolov5/data/images/', parking_name)
-    latest_frame_path = '/path/to/image/directory/latest_frame.jpg'
+def save_parking_image(building_num):
+    image_path = os.path.join('YOLO_nodel/yolov5/data/images/', building_num)
+    latest_frame_path = '/latest_frame.jpg'
     os.rename(latest_frame_path, image_path)
 
 # 캡쳐된 사진을 삭제하는 기능
@@ -66,11 +66,12 @@ def get_latest_parking_image(parking_name):
     return image_path
 
 # 캡쳐한 사진을 resize 하는 기능
-def resize_image(image_path):
+def resize_image(image_path, building_num):
     img = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
     # interpolation : 리사이징에 사용할 알고리즘
     resized = cv2.resize(img, (1280, 1280), interpolation=cv2.INTER_AREA)
-    cv2.imwrite('/Users/jieon/temp/resized_image.jpg', resized)
+    cv2.imwrite(f'YOLO_model/yolov5/data/images/{building_num}/resized_image.jpg', resized)
+
 
 # 캡쳐된 사진을 모델로 전송하는 기능
 def get_resized_parking_image(parking_name):
@@ -82,15 +83,15 @@ def get_resized_parking_image(parking_name):
 
 
 # 터미널 명령어를 이용해 detect.py 실행
-def execute_detect_py(parking_name):
+def execute_detect_py(building_num):
     # detect.py 가 있는 폴더 경로
-    dir_path = 'YOLO/yolov5'
+    dir_path = 'YOLO_model/yolov5'
 
     terminal_command = f"cd {dir_path}"
     os.system(terminal_command)
 
-    terminal_command = f"python3 detect.py --weights runs/train/exp10/weights/best.pt --img 1280 --conf 0.25 "\
-                       f"--source data/images/{parking_name} --save-txt"
+    terminal_command = f"python3 detect.py --weights runs/train/weights/best.pt --img 1280 --conf 0.4 "\
+                       f"--source data/images/{building_num} --save-txt  --name {building_num}/result"
     os.system(terminal_command)
 
 
