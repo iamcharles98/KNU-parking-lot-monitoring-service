@@ -16,7 +16,7 @@
         <li>D 구역</li>
       </ul>
     </li>
-    <li class="item" id="item_2">
+    <li class="item">
       <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
       <ul>
         <li>A 구역</li>
@@ -25,7 +25,7 @@
         <li>D 구역</li>
       </ul>
     </li>
-    <li class="item" id="item_3">
+    <li class="item">
       <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
       <ul>
         <li>A 구역</li>
@@ -35,8 +35,8 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'section_4' %}">📍 4 구역 ></a>
-      <ul>
+      <a id="item_4_a" href="{% url 'section_4' %}">📍 4 구역 ></a>
+      <ul id="item_4">
         <li>A 구역
           {{sub_sector.0.1}}</li>
         <li>B 구역
@@ -68,6 +68,8 @@
 {% endblock %}
 
 {% block content %}
+  <h3 style="color : {{color}}">안녕
+  </h3>
   <div id="background">
     <a href="{% url 'temp' 1 %}">
       <img id="section_A" src="{% static 'images/frame/section4_A.png' %}" style="opacity: 0.7;">

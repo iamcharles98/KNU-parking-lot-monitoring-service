@@ -27,7 +27,7 @@ def section_4(request):
     dict2={'A':3,'C':5,'D':1,"B":8}
     dict2 = sorted(list(zip(dict2.keys(), dict2.values())), key=lambda x: x[0])
     
-    return render(request, 'section_4.html',{'sub_sector':dict2})
+    return render(request, 'section_4.html',{'sub_sector':dict2,'color':'#58595B'})
 
 
 def detail4_D(request):

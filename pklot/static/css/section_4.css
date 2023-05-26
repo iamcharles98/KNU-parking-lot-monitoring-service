@@ -9,6 +9,9 @@
 .item:hover > ul {
   display: block;
 }
+#item_4_a {
+  text-decoration: underline 2px #e60000;
+}
 
 #item_4 {
   display: block;
