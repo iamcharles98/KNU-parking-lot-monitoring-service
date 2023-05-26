@@ -1,3 +1,4 @@
+
 .item > ul {
   /* border: 1px solid black; */
   display: none;
@@ -60,25 +61,25 @@ ul > li {
 }
 #section_C {
   top: 31%;
-  left: -22%;
+  left: -20%;
 }
 #section_D {
-  top: 20%;
-  left: -20.5%;
+  top: 19%;
+  left: -22%;
 }
 #section_E {
   top: 9%;
-  left: 55%;
+  left: 58.5%;
 }
 #section_F {
   top: -23%;
-  left: 52.5%;
+  left: 56%;
 }
 #section_G {
-  top: -3%;
-  left: 40%;
+  top: -3.5%;
+  left: 42.5%;
 }
 #section_H {
-  top: 7%;
-  left: 32%;
+  top: 6%;
+  left: 34%;
 }
