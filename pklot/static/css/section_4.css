@@ -11,9 +11,8 @@
   display: block;
 }
 
-
 #item_4 {
-  display: block
+  display: block;
 }
 
 .item {
@@ -78,7 +77,7 @@ ul > li {
 }
 #section_E {
   top: 9%;
-  left: 58.5%;
+  left: 56%;
 }
 #section_F {
   top: -23%;
