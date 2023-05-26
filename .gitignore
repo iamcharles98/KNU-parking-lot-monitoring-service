@@ -12,7 +12,9 @@ db.sqlite3-journal
 media
 config/my_settings.py
 myvenv
-migrations/
+migrations
+config/settings.py
+
 
 
 

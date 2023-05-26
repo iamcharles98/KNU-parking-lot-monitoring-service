@@ -13,7 +13,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from config import my_settings
+
+import pymysql
+pymysql.install_as_MySQLdb()
+
+
 # import pymysql
+# pymysql.version_info = (1, 0, 2, "final", 0)
 # pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  # djangorestframework사용을 위해(설치 필요)
     'pklot.apps.PklotConfig',
-    'building',
+    'building.apps.BuildingConfig',
 ]
 
 MIDDLEWARE = [
