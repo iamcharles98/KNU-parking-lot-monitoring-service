@@ -3,9 +3,17 @@
   /* border: 1px solid black; */
   display: none;
 }
-.item:hover > ul {
+.item > ul > li {
+  padding: 1%;
+}
+
+.item:hover > ul{
   display: block;
-  animation-duration: 5ms;
+}
+
+
+#item_4 {
+  display: block
 }
 
 .item {
@@ -20,6 +28,7 @@
   text-align: center;
   letter-spacing: 0.05em;
 }
+
 ul {
   padding: 10%;
   list-style: none;
@@ -61,11 +70,11 @@ ul > li {
 }
 #section_C {
   top: 31%;
-  left: -20%;
+  left: -23%;
 }
 #section_D {
   top: 19%;
-  left: -22%;
+  left: -23%;
 }
 #section_E {
   top: 9%;
@@ -73,11 +82,11 @@ ul > li {
 }
 #section_F {
   top: -23%;
-  left: 56%;
+  left: 55%;
 }
 #section_G {
   top: -3.5%;
-  left: 42.5%;
+  left: 41.5%;
 }
 #section_H {
   top: 6%;

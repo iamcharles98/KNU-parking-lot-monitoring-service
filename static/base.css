@@ -7,11 +7,20 @@
 }
 a {
   text-decoration: none;
+<<<<<<< HEAD
   color: black;
 }
 
 * {
   font-family: "NanumSquareNeo";
+=======
+  color:black;
+}
+
+*{
+  font-family: 'NanumSquareNeo';
+  color: #58595B;
+>>>>>>> d0ca319c1c56cf28f4ef46f38a949c6253a36c79
 }
 
 .header {
@@ -44,7 +53,7 @@ a {
   /* background-color: pink; */
   /* flex-basis: 8; */
   width: 80%;
-  border: 0.5px solid pink;
+  /*border: 0.5px solid pink;*/
 }
 
 h1 {
@@ -59,10 +68,13 @@ em {
   color: #3dcf92;
   font-style: normal;
 }
+#univ{
+  color:#E60000;
+}
+
 
 .searchform {
   height: 15%;
-  border: 0.5px solid gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +89,7 @@ em {
 .form-control {
   background: #d9d9d9;
   border-radius: 10px;
+  margin-left: 3%;
 }
 .category {
   height: 85%;
@@ -84,7 +97,7 @@ em {
 }
 #static_background {
   position: relative;
-  width: 1088px;
+  width: 1150px;
   height: 700px;
   left: 7%;
   top: 10%;

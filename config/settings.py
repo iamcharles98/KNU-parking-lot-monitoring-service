@@ -22,7 +22,7 @@ pymysql.install_as_MySQLdb()
 # pymysql.version_info = (1, 0, 2, "final", 0)
 # pymysql.install_as_MySQLdb()
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Build paths inside the prgitoject like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
