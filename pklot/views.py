@@ -15,18 +15,32 @@ def cover(request):
 
 
 def section_4(request):
-    data_list = utils.get_sector(4)
+    section_id = 4
+    data_list = utils.get_sector(section_id)
     dict = {}
     for data in data_list:
         if data.get('sub_sector') not in dict:
             dict[data.get('sub_sector')] = data.get('pk_count')
         else:
             dict[data.get('sub_sector')] += data.get('pk_count')
-    return render(request, 'section_4.html', {'data': dict})
+    return render(request, 'section_4.html')
 
 
 def detail4_D(request):
+    # 4구역 D에 속하는 빌딩들 : 415, 416, 417
+    dict = {}
+    sector_id = 4
+    subsector_id = 'D'
+    location_list = utils.get_subsector(sector_id, subsector_id)
+    # data => [building_num, pk_area, empty]
+    for location in location_list:
+        if location.get('building_num') not in dict:
+            dict[location.get('building_num')] = [(location.get('pk_area'), location.get('empty'))]
+        else:
+            dict[location.get('building_num')].append((location.get('pk_area'), location.get('empty')))
+    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
     return render(request, 'detail4_D.html')
+
 
 
 def detail4_H(request):

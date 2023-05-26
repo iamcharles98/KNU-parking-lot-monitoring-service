@@ -1,6 +1,6 @@
 from django.http import Http404
 
-#from cctv import views
+# from cctv import views
 from building.models import Building, Pk_location
 from pklot.serializers import buildingSerializers, locationSerializers
 from django.core.exceptions import ObjectDoesNotExist
@@ -19,19 +19,21 @@ def get_sector(sector_id):
 
 
 def get_subsector(sector_id, subsector_id):
-    locations = Pk_location.objects.select_related('building').filter(where=["sector = '%d'", "sub_sector = '%s'"],
-                                                                      params=[sector_id, subsector_id])
+    building = Building.objects.filter(sector=sector_id, sub_sector=subsector_id)
+    building_num_list = []
+    for b in building:
+        building_num_list.append(b.building_num)
+    locations = Pk_location.objects.filter(building_num__in=building_num_list)
     if locations.count() == 0:
         return Http404("No Location")
     else:
         serializer = locationSerializers(locations, many=True)
-        print(serializer.data)
         return serializer.data
 
 
 def update_pklocation(result, num):
     location_set = Pk_location.objects.filter(building_num=num)
-    if location_set.count() == 0 :
+    if location_set.count() == 0:
         return Http404("Building_num is Wrong")
     else:
         update_list = []
