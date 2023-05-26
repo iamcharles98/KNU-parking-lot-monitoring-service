@@ -7,20 +7,12 @@
 }
 a {
   text-decoration: none;
-<<<<<<< HEAD
   color: black;
 }
 
 * {
   font-family: "NanumSquareNeo";
-=======
-  color:black;
-}
-
-*{
-  font-family: 'NanumSquareNeo';
-  color: #58595B;
->>>>>>> d0ca319c1c56cf28f4ef46f38a949c6253a36c79
+  color: #58595b;
 }
 
 .header {
@@ -68,10 +60,9 @@ em {
   color: #3dcf92;
   font-style: normal;
 }
-#univ{
-  color:#E60000;
+#univ {
+  color: #e60000;
 }
-
 
 .searchform {
   height: 15%;

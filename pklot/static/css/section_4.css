@@ -1,4 +1,3 @@
-
 .item > ul {
   /* border: 1px solid black; */
   display: none;
@@ -7,13 +6,12 @@
   padding: 1%;
 }
 
-.item:hover > ul{
+.item:hover > ul {
   display: block;
 }
 
-
 #item_4 {
-  display: block
+  display: block;
 }
 
 .item {
