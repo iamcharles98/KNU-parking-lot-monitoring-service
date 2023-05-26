@@ -4,6 +4,8 @@ import requests
 import datetime
 import os
 import cv2
+from django.http import HttpResponse
+
 
 # Create your views here.
 
@@ -84,16 +86,11 @@ def get_resized_parking_image(parking_name):
 
 # 터미널 명령어를 이용해 detect.py 실행
 def execute_detect_py(building_num):
-    # detect.py 가 있는 폴더 경로
-    dir_path = 'YOLO_model/yolov5'
-
-    terminal_command = f"cd {dir_path}"
+    terminal_command = f"python3 YOLO_model/yolov5/detect.py --weights YOLO_model/yolov5/runs/train/weights/best.pt --img 1280 --conf 0.4 "\
+                       f"--source YOLO_model/yolov5/data/images/417 --save-txt  --name 417/result"
     os.system(terminal_command)
 
-    terminal_command = f"python3 detect.py --weights runs/train/weights/best.pt --img 1280 --conf 0.4 "\
-                       f"--source data/images/{building_num} --save-txt  --name {building_num}/result"
-    os.system(terminal_command)
-
+    return HttpResponse("run!")
 
 # 결과 가져 오기
 def get_result(parking_name):
