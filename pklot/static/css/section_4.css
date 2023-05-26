@@ -8,6 +8,10 @@
   animation-duration: 5ms;
 }
 
+#item_4:link{
+  display: block;
+}
+
 .item {
   text-align: center;
   /* border: 1px solid black; */
