@@ -23,7 +23,11 @@ def section_4(request):
             dict[data.get('sub_sector')] = data.get('pk_count')
         else:
             dict[data.get('sub_sector')] += data.get('pk_count')
-    return render(request, 'section_4.html')
+            
+    dict2={'A':3,'C':5,'D':1,"B":8}
+    dict2 = sorted(list(zip(dict2.keys(), dict2.values())), key=lambda x: x[0])
+    
+    return render(request, 'section_4.html',{'sub_sector':dict2})
 
 
 def detail4_D(request):

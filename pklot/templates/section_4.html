@@ -7,86 +7,91 @@
 
 {% block nav %}
   <ul>
-    <li class="item" id="item_1">
-      <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item" id="item_2">
-      <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item" id="item_3">
-      <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a style="text-decoration: underline 2px #E60000"  href="{% url 'section_4' %}">📍 4 구역 ></a>
-      <ul id="item_4">
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-        <li>E 구역</li>
-        <li>F 구역</li>
-        <li>G 구역</li>
-      </ul>
-    </li>
-    <li class="item" id="item_5">
-      <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-  </ul>
+    <<<<<<< HEAD <li class="item"> <a href="{% url 'temp' 1 %}">📍 1 구역></a> ======= <li class="item" id="item_1"> <a href="{% url 'temp' 1 %}">📍 1 구역 ></a> >>>>>>> d0ca319c1c56cf28f4ef46f38a949c6253a36c79
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item" id="item_2">
+    <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item" id="item_3">
+    <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'section_4' %}">📍 4 구역 ></a>
+    <ul>
+      <li>A 구역
+        {{sub_sector.0.1}}</li>
+      <li>B 구역
+        {{sub_sector.1.1}}</li>
+      <li>C 구역
+        {{sub_sector.2.1|default:"nothing"}}</li>
+      <li>D 구역
+        {{sub_sector.3.1|default:"nothing"}}</li>
+      <li>E 구역
+        {{sub_sector.4.1|default:"nothing"}}</li>
+      <li>F 구역
+        {{sub_sector.5.1|default:"nothing"}}</li>
+      <li>G 구역
+        {{sub_sector.6.1|default:"nothing"}}</li>
+    </ul>
+  </li>
+
+  <li class="item">
+    <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+</ul>
 
 {% endblock %}
 
 {% block content %}
-
-  {{data}}
-  <div id="background">
-    <a href="{% url 'temp' 1 %}">
-      <img id="section_A" src="{% static 'images/frame/section4_A.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'temp' 2 %}">
-      <img id="section_B" src="{% static 'images/frame/section4_B.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'temp' 3 %}">
-      <img id="section_C" src="{% static 'images/frame/section4_C.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'detail4_D' %}">
-      <img id="section_D" src="{% static 'images/frame/section4_D.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'temp' 4 %}">
-      <img id="section_E" src="{% static 'images/frame/section4_E.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'detail4_F' %}">
-      <img id="section_F" src="{% static 'images/frame/section4_F.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'detail4_G' %}">
-      <img id="section_G" src="{% static 'images/frame/section4_G.png' %}" style="opacity: 0.7;">
-    </a>
-    <a href="{% url 'detail4_H' %}">
-      <img id="section_H" src="{% static 'images/frame/section4_H.png' %}" style="opacity: 0.7;">
-    </a>
-  </div>
+<div id="background">
+  <a href="{% url 'temp' 1 %}">
+    <img id="section_A" src="{% static 'images/frame/section4_A.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'temp' 2 %}">
+    <img id="section_B" src="{% static 'images/frame/section4_B.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'temp' 3 %}">
+    <img id="section_C" src="{% static 'images/frame/section4_C.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'detail4_D' %}">
+    <img id="section_D" src="{% static 'images/frame/section4_D.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'temp' 4 %}">
+    <img id="section_E" src="{% static 'images/frame/section4_E.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'detail4_F' %}">
+    <img id="section_F" src="{% static 'images/frame/section4_F.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'detail4_G' %}">
+    <img id="section_G" src="{% static 'images/frame/section4_G.png' %}" style="opacity: 0.7;">
+  </a>
+  <a href="{% url 'detail4_H' %}">
+    <img id="section_H" src="{% static 'images/frame/section4_H.png' %}" style="opacity: 0.7;">
+  </a>
+</div>
 
 {% endblock %}
