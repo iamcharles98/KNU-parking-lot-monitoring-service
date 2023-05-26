@@ -2,10 +2,19 @@
   /* border: 1px solid black; */
   display: none;
 }
+.item > ul > li {
+  padding: 1%;
+}
 
-.item:hover > ul {
+.item:hover > ul{
   display: block;
-  animation-duration: 5ms;
+}
+#item_4_a{
+  text-decoration: underline 2px #E60000;
+}
+
+#item_4 {
+  display: block;
 }
 
 .item {
@@ -31,8 +40,7 @@ ul > li {
 
 #background {
   background-size: cover;
-  background-image: url(../images/bg_section4.png);
-
-  /* width: 100%;
-    height: 100%; */
+  background-image: url(../images/area/Area_D.png);
+  width: 100%;
+  height: 100%;
 }
