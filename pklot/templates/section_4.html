@@ -7,7 +7,7 @@
 
 {% block nav %}
   <ul>
-    <li class="item">
+    <li class="item" id="item_1">
       <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
       <ul>
         <li>A 구역</li>
@@ -16,7 +16,7 @@
         <li>D 구역</li>
       </ul>
     </li>
-    <li class="item">
+    <li class="item" id="item_2">
       <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
       <ul>
         <li>A 구역</li>
@@ -25,7 +25,7 @@
         <li>D 구역</li>
       </ul>
     </li>
-    <li class="item">
+    <li class="item" id="item_3">
       <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
       <ul>
         <li>A 구역</li>
@@ -35,7 +35,7 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'section_4' %}">📍 4 구역 ></a>
+      <a style="text-decoration: underline 2px #E60000"  href="{% url 'section_4' %}">📍 4 구역 ></a>
       <ul id="item_4">
         <li>A 구역</li>
         <li>B 구역</li>
@@ -46,8 +46,7 @@
         <li>G 구역</li>
       </ul>
     </li>
-    <li class="item">
-
+    <li class="item" id="item_5">
       <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
       <ul>
         <li>A 구역</li>
