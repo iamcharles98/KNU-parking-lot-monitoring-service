@@ -7,21 +7,12 @@
 }
 a {
   text-decoration: none;
-<<<<<<< HEAD
   color: black;
 }
 
 * {
   font-family: "NanumSquareNeo";
   color: #58595b;
-=======
-  color:black;
-}
-
-*{
-  font-family: 'NanumSquareNeo';
-  color: #58595B;
->>>>>>> a217f6029e549d26fcc66f9ae2399a113cd3015f
 }
 
 .header {
@@ -100,5 +91,5 @@ em {
   width: 1150px;
   height: 700px;
   left: 3%;
-  top: 8%;
+  top: 10%;
 }

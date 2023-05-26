@@ -1,61 +1,23 @@
-.item > ul {
-  /* border: 1px solid black; */
-  display: none;
-}
-.item > ul > li {
-  padding: 1%;
-}
+.container1 {
+  display: flex;
+  flex-direction: column;
 
-.item:hover > ul {
-  display: block;
+  width: 260px;
+  height: 130px;
+  border: solid 2px red;
+  /* background: #643bff; */
 }
-#item_4_a {
-  text-decoration: underline 2px #e60000;
-}
-
-#item_4 {
-  display: block;
-}
-
-.item {
-  text-align: center;
-  /* border: 1px solid black; */
-  margin-bottom: 20px;
-  margin-top: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
-  text-align: center;
-  letter-spacing: 0.05em;
-}
-ul {
-  padding: 10%;
-  list-style: none;
-  letter-spacing: 0.05em;
-}
-ul > li {
-  text-align: center;
-}
-
-#background {
-  background-size: cover;
-  background-image: url(../images/area/Area_D.png);
-  width: 100%;
-  height: 100%;
-}
-
-/* 여기서부터는 네모박스 관련된 것임 */
-.container0 {
+.sub_top {
   width: 260px;
   height: 130px;
   flex-direction: row;
   justify-content: space-around;
   display: flex;
-  border: solid 2px pink;
+  border: solid 2px blue;
+  /* background: #17750f; */
 }
 
-.container1 {
+.sub_bottom {
   width: 260px;
   height: 130px;
   flex-direction: row;
@@ -108,7 +70,7 @@ ul > li {
 .box {
   flex: 1;
   /* background: #d2cfe0; */
-  display: inline;
+
   /* width: 40px;
   height: 90px; */
   /* background: #75670f; */
