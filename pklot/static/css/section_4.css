@@ -3,12 +3,7 @@
   /* border: 1px solid black; */
   display: none;
 }
-.item:hover > ul {
-  display: block;
-  animation-duration: 5ms;
-}
-
-#item_4:link{
+#item_4 {
   display: block;
 }
 
