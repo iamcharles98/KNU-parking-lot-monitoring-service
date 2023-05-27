@@ -7,8 +7,6 @@ from django.core.exceptions import ObjectDoesNotExist
 
 import os
 
-"""예외 처리 필요"""
-
 
 def get_sector(sector_id):
     buildings = Building.objects.filter(sector=sector_id)
@@ -35,7 +33,8 @@ def get_subsector(sector_id, subsector_id):
 
 def update_pklocation(result, num):
     location_set = Pk_location.objects.filter(building_num=num)
-    if location_set.count() == 0 :
+    building = Building.objects.filter(building_num=num)
+    if location_set.count() == 0 or building.count() == 0:
         return Http404("Building_num is Wrong")
     else:
         update_list = []
@@ -49,31 +48,35 @@ def update_pklocation(result, num):
                 if Xmin <= x <= Xmax and Ymin <= y <= Ymax:
                     location.empty = False
                     update_list.append(location)
+        building.pk_count = building.pk_size - len(update_list)
+        if building.pk_count <= building.pk_size:
+            building.save()
         Pk_location.objects.bulk_update(update_list, ['empty'])
 
 
 def adjacent_priority_algorithm(result, num):
-    try:
-        # 전체 주차 공간 불러 오기
-        parking_area = Pk_location.objects.filter(building_num=num)
-
+    # 전체 주차 공간 불러 오기
+    parking_area = Pk_location.objects.filter(building_num=num)
+    building = Building.objects.filter(building_num=num)
+    if parking_area.count() == 0 or building.count() == 0:
+        return Http404("Building_num is Wrong")
+    else:
         update_list = []
-
         # label[0] : x, label[1] : y, label[2] : w, label[3] : h
         for label in result:
             lx, ly, lw, lh = label[1], label[2], label[3], label[4]
 
-            lx_min = lx - lw/2
-            lx_max = lx + lw/2
-            ly_min = ly - lh/2
-            ly_max = ly + lh/2
+            lx_min = lx - lw / 2
+            lx_max = lx + lw / 2
+            ly_min = ly - lh / 2
+            ly_max = ly + lh / 2
 
             include = []
 
             # 라벨 안에 포함 되는 주차 구역 구하기
             for pk in parking_area:
                 px, py, pw, ph = pk.x, pk.y, pk.w, pk.h
-                points = [[px+pw/2, py], [px-pw/2, py], [pw, py+ph/2], [pw, py-ph/2]]
+                points = [[px + pw / 2, py], [px - pw / 2, py], [pw, py + ph / 2], [pw, py - ph / 2]]
 
                 for point in points:
                     if lx_min < point[0] < lx_max and ly_min < point[1] < ly_max:
@@ -87,7 +90,7 @@ def adjacent_priority_algorithm(result, num):
                 min_distance = float("inf")
                 area = -1
                 for pk in include:
-                    y_min = pk.y - pk.h/2
+                    y_min = pk.y - pk.h / 2
                     distance = abs(ly_min - y_min)
 
                     if distance < min_distance:
@@ -99,12 +102,10 @@ def adjacent_priority_algorithm(result, num):
                 result.empty = False
                 update_list.append(result)
                 print(area)
-
+        building.pk_count = building.pk_size - len(update_list)
+        if building.pk_count <= building.pk_size:
+            building.save()
         Pk_location.objects.bulk_update(update_list, ['empty'])
-
-    except ObjectDoesNotExist:
-        print("Object Not Exist")
-        return
 
 
 def change_file(parking_name):
@@ -137,6 +138,7 @@ def change_file(parking_name):
 
         # Truncate the remaining content (if any) after the last valid line
         file.truncate()
+
 
 def read_rows_from_file(file_path):
     rows = []  # Initialize an empty list to store the rows
