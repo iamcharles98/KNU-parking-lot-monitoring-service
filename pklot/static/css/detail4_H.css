@@ -52,18 +52,56 @@ ul > li {
   height: 60px;
 }
 
-.container1{
+.container1 {
+  width: 60px;
+  height: 256px;
+  justify-content: space-between;
   position: absolute;
-  top: 0%;
-  left : 5%;
-
+  top: 33%;
+  left : 10%;
 }
-.container2{
+.container2 {
+  width: 60px;
+  height: 516px;
+  justify-content: space-between;
   position: absolute;
-  top: 0%;
-  left : 5%;
-
+  top: 21.3%;
+  left : 23.7%;
 }
+
+.container3 {
+  width: 60px;
+  height: 568px;
+  justify-content: space-between;
+  position: absolute;
+  top: 18.5%;
+  left : 40.5%;
+}
+.container4 {
+  width: 204px;
+  height: 60px;
+  justify-content: space-between;
+  position: absolute;
+  top: 19.5%;
+  left : 48.4%;
+}
+.container5 {
+  width: 204px;
+  height: 60px;
+  justify-content: space-between;
+  position: absolute;
+  top: 86.6%;
+  left : 48.4%;
+}
+.container6 {
+  width: 60px;
+  height: 672px;
+  justify-content: space-between;
+  position: absolute;
+  top: 2.6%;
+  left : 67.2%;
+}
+
 
 .box {
   border: pink 1px solid;  
