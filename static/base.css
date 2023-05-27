@@ -57,13 +57,16 @@ h1 {
 }
 
 em {
-  color: #3dcf92;
   font-style: normal;
 }
 #univ{
   color:#E60000;
 }
-
+#map{
+  color: #3dcf92;
+  size: 50px 50px;
+  background-image: url(../static/map_bg.png);
+}
 
 .searchform {
   height: 15%;

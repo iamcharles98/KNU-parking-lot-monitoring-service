@@ -1,115 +1,117 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/detail4_H.css' %}"
+  type="text/css"
+/>
+{% endblock %} {% block nav %}
+<ul>
+  <li class="item">
+    <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'section_4' %}">📍 4 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+      <li>E 구역</li>
+      <li>F 구역</li>
+      <li>G 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+</ul>
 
-{% block style %}
-  <link rel="stylesheet" href="{% static 'css/detail4_H.css' %}" type="text/css">
-{% endblock %}
+{% endblock %} {% block content %}
 
-{% block nav %}
-  <ul>
-    <li class="item">
-      <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a href="{% url 'section_4' %}">📍 4 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-        <li>E 구역</li>
-        <li>F 구역</li>
-        <li>G 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-
-      <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-  </ul>
-
-{% endblock %}
-
-{% block content %}
-
-  <div id="background">
-    
-    <script language="javascript" type="text/javascript">
-      document.write("<div class='container1'>")
-      for (i = 1; i < 6; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container1</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container2'>")
-      for (i = 6; i < 16; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container2</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container3'>")
-      for (i = 16; i < 27; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container3</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container4'>")
-      for (i = 27; i < 31; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container4</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container5'>")
-      for (i = 31; i < 35; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container5</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container6'>")
+<div id="background">
+  <script language="javascript" type="text/javascript">
+    document.write("<div class='container1'>")
+    for (i = 1; i < 6; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container1</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container2'>")
+    for (i = 6; i < 16; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container2</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container3'>")
+    for (i = 16; i < 27; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container3</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container4'>")
+    for (i = 27; i < 31; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container4</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container5'>")
+    for (i = 31; i < 35; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container5</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container6'>")
+    for (i = 35; i < 48; i++){
+      document.write(
+        " <div class='box' id =" +i+ " >container6</div>");
+    }
+    document.write("</div>")
+    document.write("<div class='container6'>")
       for (i = 35; i < 48; i++){
         document.write(
           " <div class='box' id =" +i+ " >container6</div>");
       }
-      document.write("</div>")
-      for (i=0;i<45;i++){
-        const element = document.getElementById(i);
-        var color = {{colors}}
-        if (!color) {
-          element.style.background="blue";
-        }
+    document.write("</div>")
+
+    for (i=1;i<48;i++){
+      const element = document.getElementById(i);
+      var color = {{colors}}
+      if (!color) {
+        element.style.background="lightgreen";
+        element.style.opacity="0.5"
       }
-      
-    </script>
-  </div>
+    }
+  </script>
+</div>
 
 {% endblock %}

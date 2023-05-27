@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} 
+{% load static %} 
 
 {% block style %}
-  <link rel="stylesheet" href="{% static 'css/detail4_G.css' %}" type="text/css">
-{% endblock %}
-
+  <link rel="stylesheet" href="{% static 'css/detail4_G.css' %}"
+  type="text/css"
+{% endblock %} 
 {% block nav %}
   <ul>
     <li class="item">
@@ -61,8 +61,68 @@
 {% endblock %}
 
 {% block content %}
+
   <div id="background">
-    <h3>여기는 4_G 구역입니다.</h3>
+    
+    <script language="javascript" type="text/javascript">
+      document.write("<div class='container1'>")
+      for (i = 1; i < 6; i++){
+        document.write(" <div class='box' id =" +i+ " >container1</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container2'>")
+      for (i = 6; i < 16; i++){
+        document.write(
+          " <div class='box' id =" +i+ " >container2</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container3'>")
+      for (i = 16; i < 19; i++){
+        document.write(
+          " <div class='box' id =" +i+ " >container3</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container4'>")
+      for (i = 19; i < 25; i++){
+        document.write(
+          " <div class='box' id =" +i+ " >container4</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container5'>")
+      for (i = 25; i < 36; i++){
+        document.write(
+          " <div class='box' id =" +i+ " >container5</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container6'>")
+      for (i = 36; i < 45; i++){
+        document.write(
+          " <div class='box' id =" +i+ " >container6</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container7'>")
+        for (i = 45; i < 51; i++){
+          document.write(
+            " <div class='box' id =" +i+ " >container6</div>");
+        }
+      document.write("</div>")
+      document.write("<div class='container8'>")
+        for (i = 51; i < 60; i++){
+          document.write(
+            " <div class='box' id =" +i+ " >container6</div>");
+        }
+      document.write("</div>")
+          
+      for (i=1;i<60;i++){
+        const element = document.getElementById(i);
+        var color = {{colors}}
+        if (!color) {
+          element.style.background="lightgreen";
+          element.style.opacity="0.5"
+        }
+      }
+      
+    </script>
   </div>
 
 {% endblock %}
