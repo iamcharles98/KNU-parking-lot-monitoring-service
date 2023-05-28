@@ -33,19 +33,25 @@ def update_pklocation(result, num):
     building = get_object_or_404(Building, building_num=num)
 
     if location_set.count() == 0:
+        print("CHECK")
         return Http404("Building_num is Wrong")
     else:
+        print("CHECK2")
         update_list = []
         for location in location_set:
             Xmin = location.x - location.w / 2
             Xmax = location.x + location.w / 2
             Ymin = location.y - location.h / 2
             Ymax = location.y + location.h / 2
+
             for el in result:
                 x, y = el[1], el[2]
                 if Xmin <= x <= Xmax and Ymin <= y <= Ymax:
                     location.empty = False
                     update_list.append(location)
+
+            print()
+
         building.pk_count = building.pk_size - len(update_list)
         if building.pk_count <= building.pk_size:
             building.save()
@@ -65,7 +71,6 @@ def adjacent_priority_algorithm(result, num):
         # label[1] : x, label[2] : y, label[3] : w, label[4] : h
         for label in result:
             lx, ly, lw, lh = label[1], label[2], label[3], label[4]
-            print(f'{lx} {ly} {lw} {lh}')
             lx_min = lx - lw / 2
             lx_max = lx + lw / 2
             ly_min = ly + lh / 2
