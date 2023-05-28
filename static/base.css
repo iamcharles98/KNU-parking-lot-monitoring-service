@@ -61,10 +61,6 @@ h1 {
 em {
   font-style: normal;
 }
-<<<<<<< HEAD
-#univ {
-  color: #e60000;
-=======
 
 #univ {
   color: #e60000;
@@ -78,7 +74,6 @@ em {
   background-image: url(../static/map_bg.png);
   background-size: 110% 100%;
   object-fit: cover;
->>>>>>> bc40fef284787ae0d77508c076228c8d6e85adca
 }
 
 .searchform {
@@ -112,10 +107,5 @@ em {
   width: 1150px;
   height: 700px;
   left: 3%;
-<<<<<<< HEAD
-  top: 10%;
-}
-=======
   top: 4%;
 }
->>>>>>> bc40fef284787ae0d77508c076228c8d6e85adca
