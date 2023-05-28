@@ -72,11 +72,52 @@ def detail4_D(request):
 
 
 def detail4_H(request):
-    return render(request, 'detail4_H.html',{'colors':0})
+
+     # 4구역 H에 속하는 빌딩들 : 420
+    dict = {}
+    sector_id = 4
+    subsector_id = 'D' # 원래는 F 가 맞음
+    color = GREEN
+    location_list = utils.get_subsector(sector_id, subsector_id)
+    # data => [building_num, pk_area, empty]
+    for location in location_list:
+        if location.get('empty'):
+               color = GREEN
+        else:
+           color = RED
+        if location.get('building_num') not in dict:
+            dict[location.get('building_num')] = [(location.get('pk_area'), color)]
+        else:
+            dict[location.get('building_num')].append((location.get('pk_area'),color))
+    print("420 건물 정보는 :", dict.get(420))
+    print('\n')
+    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
+    return render(request, 'detail4_H.html',{'location_info_420':dict.get(420),})
+
 
 
 def detail4_G(request):
-    return render(request, 'detail4_G.html')
+     # 4구역 G에 속하는 빌딩들 : 418
+    dict = {}
+    sector_id = 4
+    subsector_id = 'D' 
+    color = GREEN
+    location_list = utils.get_subsector(sector_id, subsector_id)
+    # data => [building_num, pk_area, empty]
+    for location in location_list:
+        if location.get('empty'):
+               color = GREEN
+        else:
+           color = RED
+        if location.get('building_num') not in dict:
+            dict[location.get('building_num')] = [(location.get('pk_area'), color)]
+        else:
+            dict[location.get('building_num')].append((location.get('pk_area'),color))
+    print("418 건물 정보는 :", dict.get(418))
+    print('\n')
+    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
+    return render(request, 'detail4_G.html',{'location_info_418':dict.get(418),})
+   
 
 
 def detail4_F(request):
