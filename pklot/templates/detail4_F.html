@@ -35,8 +35,8 @@
       </ul>
     </li>
     <li class="item">
-      <a href="{% url 'section_4' %}">📍 4 구역 ></a>
-      <ul>
+      <a id="item_4_a" href="{% url 'section_4' %}">📍 4 구역 ></a>
+      <ul id="item_4">
         <li>A 구역</li>
         <li>B 구역</li>
         <li>C 구역</li>
@@ -62,7 +62,23 @@
 
 {% block content %}
   <div id="background">
-    <h3>여기는 4_F 구역입니다.</h3>
+    <script language="javascript" type="text/javascript">
+      document.write("<div class='container1'>")
+      for (i = 1; i < 11; i++) {
+        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container2'>")
+      for (i = 11; i < 15; i++) {
+        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
+      }
+      document.write("</div>")
+      document.write("<div class='container3'>")
+      for (i = 15; i < 18; i++) {
+        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
+      }
+      document.write("</div>")
+    </script>
   </div>
 
 {% endblock %}
