@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c6fd3e6-6f1d-4a70-bdc2-6dc8ae05cb66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/415/415.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/415/415.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/416/416.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/416/416.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/415.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/labels/415.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/416.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/labels/416.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/417/result/417.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/417/result/labels/417.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pklot/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pklot/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pklot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pklot/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PBWnMb6lhagdSPa0ptYzJeJDD7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jieon/Desktop/KNU_Project/YOLO_model/yolov5/data/images/415",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5/data/images/415" />
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5/data/images/416" />
+      <recent name="$PROJECT_DIR$/pklot" />
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5/data/images/417" />
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cctv" />
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5/data/images/417" />
+      <recent name="$PROJECT_DIR$/YOLO_model/yolov5" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c6fd3e6-6f1d-4a70-bdc2-6dc8ae05cb66" name="Changes" comment="" />
+      <created>1682931120713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682931120713</updated>
+      <workItem from="1682931122648" duration="34179000" />
+      <workItem from="1684240286454" duration="81264000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/backend_cctv" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/KNU_Project$views.coverage" NAME="views Coverage Results" MODIFIED="1683028166762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cctv" />
+    <SUITE FILE_PATH="coverage/KNU_Project$utils.coverage" NAME="utils Coverage Results" MODIFIED="1684925475531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pklot" />
+  </component>
+</project>

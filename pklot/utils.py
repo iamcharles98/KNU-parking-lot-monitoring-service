@@ -33,10 +33,8 @@ def update_pklocation(result, num):
     building = get_object_or_404(Building, building_num=num)
 
     if location_set.count() == 0:
-        print("CHECK")
         return Http404("Building_num is Wrong")
     else:
-        print("CHECK2")
         update_list = []
         for location in location_set:
             Xmin = location.x - location.w / 2
@@ -49,8 +47,6 @@ def update_pklocation(result, num):
                 if Xmin <= x <= Xmax and Ymin <= y <= Ymax:
                     location.empty = False
                     update_list.append(location)
-
-            print()
 
         building.pk_count = building.pk_size - len(update_list)
         if building.pk_count <= building.pk_size:
