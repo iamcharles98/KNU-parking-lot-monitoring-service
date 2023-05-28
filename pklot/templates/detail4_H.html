@@ -62,55 +62,39 @@
   <script language="javascript" type="text/javascript">
     document.write("<div class='container1'>")
     for (i = 1; i < 6; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container1</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container2'>")
     for (i = 6; i < 16; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container2</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container3'>")
     for (i = 16; i < 27; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container3</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container4'>")
     for (i = 27; i < 31; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container4</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container5'>")
     for (i = 31; i < 35; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container5</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container6'>")
     for (i = 35; i < 48; i++){
-      document.write(
-        " <div class='box' id =" +i+ " >container6</div>");
+      document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
     }
     document.write("</div>")
     document.write("<div class='container6'>")
       for (i = 35; i < 48; i++){
-        document.write(
-          " <div class='box' id =" +i+ " >container6</div>");
+        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
       }
     document.write("</div>")
-
-    for (i=1;i<48;i++){
-      const element = document.getElementById(i);
-      var color = {{colors}};
-      if (!color) {
-        element.style.background="lightgreen";
-        element.style.opacity="0.5"
-      }
-    }
   </script>
 </div>
 
