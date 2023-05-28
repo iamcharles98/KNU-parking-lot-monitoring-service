@@ -46,9 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',  # djangorestframework사용을 위해(설치 필요)
-    'pklot.apps.PklotConfig',
-    'building.apps.BuildingConfig',
+    'django_apscheduler',
+    'cctv',
+    'pklot',
+    'building',
 ]
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"  # Default
+SCHEDULER_DEFAULT = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
