@@ -6,8 +6,8 @@ from . import views
 
 urlpatterns = [
 
-    path("", views.home),
-    path("cover",views.cover),
+    path("home", views.home,name = "home"),
+    path("",views.cover,name ="cover" ),
     path("section4",views.section_4,name="section_4"), # url은 html 에서 name 으로 불려진다.
 
     path("detail4D",views.detail4_D,name="detail4_D"),
