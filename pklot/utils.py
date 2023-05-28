@@ -1,10 +1,7 @@
 from django.http import Http404
-
-from cctv import views
+from django.shortcuts import get_object_or_404
 from building.models import Building, Pk_location
 from pklot.serializers import buildingSerializers, locationSerializers
-from django.core.exceptions import ObjectDoesNotExist
-
 import os
 
 
@@ -33,8 +30,9 @@ def get_subsector(sector_id, subsector_id):
 
 def update_pklocation(result, num):
     location_set = Pk_location.objects.filter(building_num=num)
-    building = Building.objects.filter(building_num=num)
-    if location_set.count() == 0 or building.count() == 0:
+    building = get_object_or_404(Building, building_num=num)
+
+    if location_set.count() == 0:
         return Http404("Building_num is Wrong")
     else:
         update_list = []
@@ -57,30 +55,34 @@ def update_pklocation(result, num):
 def adjacent_priority_algorithm(result, num):
     # 전체 주차 공간 불러 오기
     parking_area = Pk_location.objects.filter(building_num=num)
-    building = Building.objects.filter(building_num=num)
-    if parking_area.count() == 0 or building.count() == 0:
+    building = get_object_or_404(Building, building_num=num)
+
+    if parking_area.count() == 0:
         return Http404("Building_num is Wrong")
     else:
         update_list = []
-        # label[0] : x, label[1] : y, label[2] : w, label[3] : h
+        check = [False for _ in range(building.pk_size + 1)]
+        # label[1] : x, label[2] : y, label[3] : w, label[4] : h
         for label in result:
             lx, ly, lw, lh = label[1], label[2], label[3], label[4]
-
+            print(f'{lx} {ly} {lw} {lh}')
             lx_min = lx - lw / 2
             lx_max = lx + lw / 2
-            ly_min = ly - lh / 2
-            ly_max = ly + lh / 2
+            ly_min = ly + lh / 2
+            ly_max = ly - lh / 2
 
             include = []
-
+            temp = []
             # 라벨 안에 포함 되는 주차 구역 구하기
             for pk in parking_area:
                 px, py, pw, ph = pk.x, pk.y, pk.w, pk.h
-                points = [[px + pw / 2, py], [px - pw / 2, py], [pw, py + ph / 2], [pw, py - ph / 2]]
+                points = [[px + pw / 2, py], [px - pw / 2, py], [px, py + ph / 2], [px, py - ph / 2]]
 
                 for point in points:
-                    if lx_min < point[0] < lx_max and ly_min < point[1] < ly_max:
+                    if lx_min < point[0] < lx_max and ly_max < point[1] < ly_min:
                         include.append(pk)
+                        temp.append(pk.pk_area)
+                        break
 
             # 포함된 구역이 없으면 넘어가기
             if len(include) == 0:
@@ -90,7 +92,8 @@ def adjacent_priority_algorithm(result, num):
                 min_distance = float("inf")
                 area = -1
                 for pk in include:
-                    y_min = pk.y - pk.h / 2
+
+                    y_min = pk.y + pk.h / 2
                     distance = abs(ly_min - y_min)
 
                     if distance < min_distance:
@@ -98,20 +101,25 @@ def adjacent_priority_algorithm(result, num):
                         area = pk.pk_area
 
                 # 최종 결과값 넣기
-                result = Pk_location.objects.get(pk_area=area, building_num=num)
-                result.empty = False
-                update_list.append(result)
-                print(area)
+                for pk in parking_area:
+                    if area == pk.pk_area and check[area] is False:
+                        check[area] = True
+                        pk.empty = False
+                        update_list.append(pk)
+                        break
+
         building.pk_count = building.pk_size - len(update_list)
+
         if building.pk_count <= building.pk_size:
             building.save()
+
         Pk_location.objects.bulk_update(update_list, ['empty'])
 
 
-def change_file(parking_name):
+def change_file(building_num):
     # occupied 만 존재 하도록 파일을 변경
 
-    dir_path = 'YOLO/yolov5/runs/detect/' + parking_name + "/labels"
+    dir_path = f'YOLO_model/yolov5/runs/detect/{str(building_num)}/result/labels'
 
     files = sorted(os.listdir(dir_path))
     if len(files) > 0:

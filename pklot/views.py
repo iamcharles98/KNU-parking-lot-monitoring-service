@@ -4,13 +4,17 @@ from django.http import HttpResponse
 
 # Create your views here.
 def test(requests):
-    utils.update_pklocation(utils.read_rows_from_file('/Users/jieon/Desktop/KNU_Project/temp.txt'), 417)
+    result_path = '/Users/jieon/Desktop/KNU_Project/temp.txt'
+    utils.change_file(416)
+
+    utils.update_pklocation(utils.read_rows_from_file(result_path), 417)
+
     return HttpResponse("test")
 
 def test2(requests):
-    utils.adjacent_priority_algorithm(utils.read_rows_from_file('/Users/jieon/Desktop/KNU_Project/temp2.txt'), 416)
+    result_path = '/Users/jieon/Desktop/KNU_Project/temp2.txt'
+    # utils.change_file(416)
+
+    utils.adjacent_priority_algorithm(utils.read_rows_from_file(result_path), 416)
+
     return HttpResponse("test2")
-
-def run(requests):
-
-    return HttpResponse("Run YOLO model")
