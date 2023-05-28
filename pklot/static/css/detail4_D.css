@@ -46,23 +46,25 @@ ul > li {
 }
 
 /* 여기서부터는 네모박스 관련된 것임 */
+
 .container0 {
-  width: 260px;
-  height: 130px;
+  width: 256px;
+  height: 60px;
   flex-direction: row;
   justify-content: space-around;
   display: flex;
-  border: solid 2px pink;
+  border: solid 2px blue;
+  /* background: #17750f; */
 }
 
 .container1 {
-  width: 260px;
-  height: 130px;
+  width: 256px;
+  height: 60px;
   flex-direction: row;
   justify-content: space-around;
   display: flex;
-  border: solid 2px pink;
-  /* background: #75670f; */
+  border: solid 2px blue;
+  /* background: #17750f; */
 }
 
 .container2 {

@@ -46,12 +46,19 @@
     <div class="container4">
 
       <script language="javascript" type="text/javascript">
-        
-        for (i = 0; i < 4; i++){
+        for (i = 0; i < 45; i++){
           document.write(
-            "<div class='box' id =" +i+ " style='background: #ffffff'></div>")
+            "<div class='box' id =" +i+ " style='background: #ffffff'></div>");
         }
-      </script>      
+        for (i=0;i<45;i++){
+          const element = document.getElementById(i);
+          var color = {{colors}}
+          if (!color) {
+            element.style.background="blue";
+          }
+        }
+        
+      </script>     
       {% comment %} <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
