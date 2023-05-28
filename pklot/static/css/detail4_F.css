@@ -1,11 +1,22 @@
-.item > ul {
+.item>ul {
   /* border: 1px solid black; */
   display: none;
 }
 
-.item:hover > ul {
+.item>ul>li {
+  padding: 1%;
+}
+
+.item:hover>ul {
   display: block;
-  animation-duration: 5ms;
+}
+
+#item_4_a {
+  text-decoration: underline 2px #e60000;
+}
+
+#item_4 {
+  display: block;
 }
 
 .item {
@@ -20,12 +31,14 @@
   text-align: center;
   letter-spacing: 0.05em;
 }
+
 ul {
   padding: 10%;
   list-style: none;
   letter-spacing: 0.05em;
 }
-ul > li {
+
+ul>li {
   text-align: center;
 }
 

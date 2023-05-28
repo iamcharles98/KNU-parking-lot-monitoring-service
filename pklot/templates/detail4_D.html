@@ -62,91 +62,49 @@
 
 {% block content %}
   <div id="background">
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-      <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="../static/css/test.css" type="text/css"/>
-        <title>Document</title>
-      </head>
-
-      <body>
-
-        <div class="container0">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 5; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-       
-        </div>
-
-        <div class="container1">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 5; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-          
-        </div>
-        
-  
-        <div class="container2">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 6; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-          {% comment %} <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div> {% endcomment %}
-        </div>
-
-        <div class="container3">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 6; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-        </div>
-
-        <div class="container4">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 4; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-
-        </div>
-
-        <div class="container5">
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= 9; i++) {
-              document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-            }
-          </script>
-
-          {% comment %} <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div> {% endcomment %}
-        </div>
-      </body>
-
-    </html>
-
+    <script language="javascript" type="text/javascript">
+      // container 1
+      document.write("<div class='container1'>")
+      for (i = 1; i < 7; i++){
+        document.write(" <div class='box' id =4150" +i+ " >container1</div>");
+      }
+      document.write("</div>")
+      // container 2
+      document.write("<div class='container2'>")
+      for (i = 6; i < 10; i++){
+        document.write(" <div class='box' id =4150" +i+ " >container2</div>");
+      }
+      document.write(" <div class='box' id = 41510 >container2</div>")
+      document.write(" <div class='box' id = 41511>container2</div>")
+      document.write("</div>")
+      // container 3
+      document.write("<div class='container3'>")
+      for (i = 11; i < 15; i++){
+        document.write(" <div class='box' id =415" +i+ " >container3</div>");
+      }
+      document.write("</div>")
+      // container 4
+      document.write("<div class='container4'>")
+      for (i = 15; i < 21; i++){
+        document.write(" <div class='box' id =415" +i+ " >container4</div>");
+      }
+      document.write("</div>")
+      // container 5
+      document.write("<div class='container5'>")
+      for (i = 1; i < 7; i++){
+        document.write(" <div class='box' id =4160" +i+ " >container5</div>");
+      }
+      document.write("</div>")
+      // container 6
+      document.write("<div class='container6'>")
+      document.write(" <div class='box' id = 41607 >container6</div>");
+      document.write(" <div class='box' id = 41608>container6</div>");
+      document.write(" <div class='box' id = 41609>container6</div>");
+      for (i = 10; i < 16; i++){
+        document.write(" <div class='box' id =" +i+ " >container6</div>");
+      }
+      document.write("</div>")
+    </script>
   </div>
 
 {% endblock %}
