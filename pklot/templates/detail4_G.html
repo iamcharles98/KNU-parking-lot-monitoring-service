@@ -2,51 +2,45 @@
 {% load static %}
 
 {% block style %}
-  <link rel="stylesheet" href="{% static 'css/detail4_G.css' %}"
-  type="text/css"
-{% endblock %} 
-{% block nav %}
-  <ul>
-    <li class="item">
-      <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
-      <ul>
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-      </ul>
-    </li>
-    <li class="item">
-      <a id="item_4_a" href="{% url 'section_4' %}">📍 4 구역 ></a>
-      <ul id="item_4">
-        <li>A 구역</li>
-        <li>B 구역</li>
-        <li>C 구역</li>
-        <li>D 구역</li>
-        <li>E 구역</li>
-        <li>F 구역</li>
-        <li>G 구역</li>
-      </ul>
-    </li>
-    <li class="item">
+  <link 1="1" 📍="📍" rel="stylesheet" href="{% static 'css/detail4_G.css' %}" type="text/css" {% endblock %} {% block nav %} <ul> <li class="item"> <a href="{% url 'temp' 1 %}"> 구역="구역"></a>
+<ul>
+  <li>A 구역</li>
+  <li>B 구역</li>
+  <li>C 구역</li>
+  <li>D 구역</li>
+</ul>
+</li>
+<li class="item">
+<a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
+<ul>
+  <li>A 구역</li>
+  <li>B 구역</li>
+  <li>C 구역</li>
+  <li>D 구역</li>
+</ul>
+</li>
+<li class="item">
+<a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
+<ul>
+  <li>A 구역</li>
+  <li>B 구역</li>
+  <li>C 구역</li>
+  <li>D 구역</li>
+</ul>
+</li>
+<li class="item">
+<a id="item_4_a" href="{% url 'section_4' %}">📍 4 구역 ></a>
+<ul id="item_4">
+  <li>A 구역</li>
+  <li>B 구역</li>
+  <li>C 구역</li>
+  <li>D 구역</li>
+  <li>E 구역</li>
+  <li>F 구역</li>
+  <li>G 구역</li>
+</ul>
+</li>
+<li class="item">
 
 <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
 <ul>
@@ -63,48 +57,98 @@
 {% block content %}
 
 <div id="background">
-<script language="javascript" type="text/javascript">
-document.write("<div class='container1'>")
-for (i = 1; i < 6; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container2'>")
-for (i = 6; i < 16; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container3'>")
-for (i = 16; i < 19; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container4'>")
-for (i = 19; i < 25; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container5'>")
-for (i = 25; i < 36; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container6'>")
-for (i = 36; i < 45; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container7'>")
-for (i = 45; i < 51; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-document.write("<div class='container8'>")
-for (i = 51; i < 60; i++) {
-  document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-}
-document.write("</div>")
-</script>
+
+<div class='container1'>
+
+<div class="box" id="1" style="background: {{location_info_415.1.1}}"></div>
+<div class="box" id="2" style="background: {{location_info_415.2.1}}"></div>
+<div class="box" id="3" style="background: {{location_info_415.3.1}}"></div>
+<div class="box" id="4" style="background: {{location_info_415.4.1}}"></div>
+<div class="box" id="5" style="background: {{location_info_415.5.1}}"></div>
+
+</div>
+
+<div class='container2'>
+
+<div class="box" id="6" style="background: {{location_info_415.6.1}}"></div>
+<div class="box" id="7" style="background: {{location_info_415.7.1}}"></div>
+<div class="box" id="8" style="background: {{location_info_415.8.1}}"></div>
+<div class="box" id="9" style="background: {{location_info_415.9.1}}"></div>
+<div class="box" id="10" style="background: {{location_info_415.10.1}}"></div>
+<div class="box" id="11" style="background: {{location_info_415.11.1}}"></div>
+<div class="box" id="12" style="background: {{location_info_415.12.1}}"></div>
+<div class="box" id="13" style="background: {{location_info_415.13.1}}"></div>
+<div class="box" id="14" style="background: {{location_info_415.14.1}}"></div>
+<div class="box" id="15" style="background: {{location_info_415.15.1}}"></div>
+
+</div>
+
+<div class='container3'>
+
+<div class="box" id="16" style="background: {{location_info_416.16.1}}"></div>
+<div class="box" id="17" style="background: {{location_info_416.17.1}}"></div>
+<div class="box" id="18" style="background: {{location_info_416.18.1}}"></div>
+
+</div>
+
+<div class='container4'>
+
+<div class="box" id="19" style="background: {{location_info_416.19.1}}"></div>
+<div class="box" id="20" style="background: {{location_info_416.20.1}}"></div>
+<div class="box" id="21" style="background: {{location_info_416.21.1}}"></div>
+<div class="box" id="22" style="background: {{location_info_416.22.1}}"></div>
+<div class="box" id="23" style="background: {{location_info_416.23.1}}"></div>
+<div class="box" id="24" style="background: {{location_info_416.24.1}}"></div>
+
+</div>
+
+<div class='container5'>
+<div class="box" id="25" style="background: {{location_info_416.25.1}}"></div>
+<div class="box" id="26" style="background: {{location_info_416.26.1}}"></div>
+<div class="box" id="27" style="background: {{location_info_416.27.1}}"></div>
+<div class="box" id="28" style="background: {{location_info_416.28.1}}"></div>
+<div class="box" id="29" style="background: {{location_info_416.29.1}}"></div>
+<div class="box" id="30" style="background: {{location_info_416.30.1}}"></div>
+<div class="box" id="31" style="background: {{location_info_416.31.1}}"></div>
+<div class="box" id="32" style="background: {{location_info_416.32.1}}"></div>
+<div class="box" id="33" style="background: {{location_info_416.33.1}}"></div>
+<div class="box" id="34" style="background: {{location_info_416.34.1}}"></div>
+<div class="box" id="35" style="background: {{location_info_416.35.1}}"></div>
+</div>
+
+<div class='container6'>
+<div class="box" id="36" style="background: {{location_info_416.36.1}}"></div>
+<div class="box" id="37" style="background: {{location_info_416.37.1}}"></div>
+<div class="box" id="38" style="background: {{location_info_416.38.1}}"></div>
+<div class="box" id="39" style="background: {{location_info_416.39.1}}"></div>
+<div class="box" id="40" style="background: {{location_info_416.40.1}}"></div>
+<div class="box" id="41" style="background: {{location_info_416.41.1}}"></div>
+<div class="box" id="42" style="background: {{location_info_416.42.1}}"></div>
+<div class="box" id="43" style="background: {{location_info_416.43.1}}"></div>
+<div class="box" id="44" style="background: {{location_info_416.44.1}}"></div>
+</div>
+
+<div class='container7'>
+<div class="box" id="45" style="background: {{location_info_416.45.1}}"></div>
+<div class="box" id="46" style="background: {{location_info_416.46.1}}"></div>
+<div class="box" id="47" style="background: {{location_info_416.47.1}}"></div>
+<div class="box" id="48" style="background: {{location_info_416.48.1}}"></div>
+<div class="box" id="49" style="background: {{location_info_416.49.1}}"></div>
+<div class="box" id="50" style="background: {{location_info_416.50.1}}"></div>
+</div>
+
+<div class='container8'>
+<div class="box" id="51" style="background: {{location_info_416.51.1}}"></div>
+<div class="box" id="52" style="background: {{location_info_416.52.1}}"></div>
+<div class="box" id="53" style="background: {{location_info_416.53.1}}"></div>
+<div class="box" id="54" style="background: {{location_info_416.54.1}}"></div>
+<div class="box" id="55" style="background: {{location_info_416.55.1}}"></div>
+<div class="box" id="56" style="background: {{location_info_416.56.1}}"></div>
+<div class="box" id="57" style="background: {{location_info_416.57.1}}"></div>
+<div class="box" id="58" style="background: {{location_info_416.58.1}}"></div>
+<div class="box" id="59" style="background: {{location_info_416.59.1}}"></div>
+</div>
+
 </div>
 
 {% endblock %}
