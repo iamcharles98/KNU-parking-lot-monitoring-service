@@ -1,10 +1,11 @@
 from building import models
 
 def initDB():
-    width = 4032  # width 가 x 좌표
-    height = 3024  # height 이 y 좌표
+    # width = 4032  # width 가 x 좌표
+    # height = 3024  # height 이 y 좌표
     chip_N = 17 # 반도체 융합 연구동
     it2_N = 15 # IT2호관 옆쪽 주차장
+    it5_N = 12 #IT융복합관
 
     chip_dot_info_1_14 = [[(0, 0), (0, 0)], [(42, 2977), (710, 2622)], [(177, 2632), (805, 2310)],
                      [(289, 2337), (887, 2037)], [(401, 2060), (960, 1794)], [(509, 1801), (1029, 1577)],
@@ -21,27 +22,8 @@ def initDB():
         chip_dot_info_15_17[i] = [(x_dot[0][0], y_dot[0][1]), (x_dot[-1][0], y_dot[-1][1])]
 
     chip_dot_info = chip_dot_info_1_14 + chip_dot_info_15_17
-    center_dot = []
-    wid = []
-    hei = []
-    for i in range(0, chip_N+1): # 중심점의 좌표를 구한다.
-        ctr_x = round((chip_dot_info[i][0][0]+chip_dot_info[i][1][0]) / 2, 3)
-        ctr_y = round((chip_dot_info[i][0][1]+chip_dot_info[i][1][1]) / 2, 3)
-        x_ratio = round(ctr_x / width, 6)  # rouond : 반올림해서 6번째 자리까지 나타냄
-        y_ratio = round(ctr_y / height, 6)
-        center_dot.append((x_ratio, y_ratio))
+    center_dot, wid, hei = calc_coordinate(chip_N, chip_dot_info)
 
-    for i in range(0, chip_N+1): # 폭과 너비를 구한다.
-        max_x = chip_dot_info[i][1][0]
-        min_x = chip_dot_info[i][0][0]
-        max_y = chip_dot_info[i][1][1]
-        min_y = chip_dot_info[i][0][1]
-        w = max_x - min_x if min_x <= max_x else min_x - max_x
-        h = max_y - min_y if min_y <= max_y else min_y - max_y
-        w_ratio = round(w / width, 6)
-        h_ratio = round(h / height, 6)
-        wid.append(w_ratio)
-        hei.append(h_ratio)
 
     if not models.Building.objects.filter(building_num=417).exists():
         models.Building(
@@ -50,7 +32,7 @@ def initDB():
             pk_size=chip_N,
             pk_count=0,
             sector=4,
-            sub_sector='D'
+            sub_sector='F'
         ).save()
 
     if not models.Pk_location.objects.filter(building_num__building_num=417).exists():
@@ -75,24 +57,25 @@ def initDB():
     center_dot.clear()
     wid.clear()
     hei.clear()
-    for i in range(0, it2_N + 1):
-        ctr_x = round((it2_dot_info_1_15[i][0][0] + it2_dot_info_1_15[i][1][0]) / 2, 3)
-        ctr_y = round((it2_dot_info_1_15[i][0][1] + it2_dot_info_1_15[i][1][1]) / 2, 3)
-        x_ratio = round(ctr_x / width, 6)  # rouond : 반올림해서 6번째 자리까지 나타냄
-        y_ratio = round(ctr_y / height, 6)
-        center_dot.append((x_ratio, y_ratio))
-
-    for i in range(0, it2_N + 1):
-        min_x = it2_dot_info_1_15[i][1][0]
-        max_x = it2_dot_info_1_15[i][0][0]
-        min_y = it2_dot_info_1_15[i][1][1]
-        max_y = it2_dot_info_1_15[i][0][1]
-        w = max_x - min_x if min_x <= max_x else min_x - max_x
-        h = max_y - min_y if min_y <= max_y else min_y - max_y
-        w_ratio = round(w / width, 6)
-        h_ratio = round(h / height, 6)
-        wid.append(w_ratio)
-        hei.append(h_ratio)
+    center_dot, wid, hei = calc_coordinate(it2_N, it2_dot_info_1_15)
+    # for i in range(0, it2_N + 1):
+    #     ctr_x = round((it2_dot_info_1_15[i][0][0] + it2_dot_info_1_15[i][1][0]) / 2, 3)
+    #     ctr_y = round((it2_dot_info_1_15[i][0][1] + it2_dot_info_1_15[i][1][1]) / 2, 3)
+    #     x_ratio = round(ctr_x / width, 6)  # rouond : 반올림해서 6번째 자리까지 나타냄
+    #     y_ratio = round(ctr_y / height, 6)
+    #     center_dot.append((x_ratio, y_ratio))
+    #
+    # for i in range(0, it2_N + 1):
+    #     min_x = it2_dot_info_1_15[i][1][0]
+    #     max_x = it2_dot_info_1_15[i][0][0]
+    #     min_y = it2_dot_info_1_15[i][1][1]
+    #     max_y = it2_dot_info_1_15[i][0][1]
+    #     w = max_x - min_x if min_x <= max_x else min_x - max_x
+    #     h = max_y - min_y if min_y <= max_y else min_y - max_y
+    #     w_ratio = round(w / width, 6)
+    #     h_ratio = round(h / height, 6)
+    #     wid.append(w_ratio)
+    #     hei.append(h_ratio)
 
     if not models.Building.objects.filter(building_num=416).exists():
         models.Building(
@@ -116,8 +99,61 @@ def initDB():
                 empty=True,
             ).save()
 
+    it5_dot_info = [[(0, 0), (0, 0)], [(391, 792), (335, 695)], [(493, 791), (423, 691)], [(564, 790), (663, 695)],
+                    [(670, 788), (754, 694)], [(777, 789), (845, 694)], [(883, 790), (930, 695)], [(153, 1271), (120, 997)],
+                    [(438, 1268), (322, 994)], [(721, 1263), (553, 994)], [(720, 1263), (834, 990)], [(905, 1269), (984, 993)],
+                    [(1089, 1268), (1120, 992)]]
+    center_dot.clear()
+    wid.clear()
+    hei.clear()
+    center_dot, wid, hei = calc_coordinate(it5_N, it5_dot_info)
 
-# def calc_coordinate(n, dot_info):
-#     center_dot = []
-#     wid = []
-#     hei = []
+    if not models.Building.objects.filter(building_num=415).exists():
+        models.Building(
+            building_num=415,  # 임시
+            building_name='IT_5',  # 임시
+            pk_size=it5_N,
+            pk_count=0,
+            sector=4,
+            sub_sector='D'
+        ).save()
+    if not models.Pk_location.objects.filter(building_num__building_num=415).exists():
+        build3 = models.Building.objects.get(building_num=415)
+        for i in range(0, it5_N + 1):
+            models.Pk_location(
+                building_num=build3, # foreign키에 연결된 데이터를 저장하려면 연결된 테이블의 인스턴스를 넘겨줘야 된다.
+                pk_area=i,
+                x=center_dot[i][0],
+                y=center_dot[i][1],
+                w=wid[i],
+                h=hei[i],
+                empty=True,
+            ).save()
+
+
+def calc_coordinate(n, dot_info):
+    width = 4032  # width 가 x 좌표
+    height = 3024  # height 이 y 좌표
+    center_dot = []
+    wid = []
+    hei = []
+    for i in range(0, n+1): # 중심점의 좌표를 구한다.
+        ctr_x = round((dot_info[i][0][0]+dot_info[i][1][0]) / 2, 3)
+        ctr_y = round((dot_info[i][0][1]+dot_info[i][1][1]) / 2, 3)
+        x_ratio = round(ctr_x / width, 6)  # rouond : 반올림해서 6번째 자리까지 나타냄
+        y_ratio = round(ctr_y / height, 6)
+        center_dot.append((x_ratio, y_ratio))
+
+    for i in range(0, n+1): # 폭과 너비를 구한다.
+        max_x = dot_info[i][1][0]
+        min_x = dot_info[i][0][0]
+        max_y = dot_info[i][1][1]
+        min_y = dot_info[i][0][1]
+        w = max_x - min_x if min_x <= max_x else min_x - max_x
+        h = max_y - min_y if min_y <= max_y else min_y - max_y
+        w_ratio = round(w / width, 6)
+        h_ratio = round(h / height, 6)
+        wid.append(w_ratio)
+        hei.append(h_ratio)
+
+    return center_dot, wid, hei
