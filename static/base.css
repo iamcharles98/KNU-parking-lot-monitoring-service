@@ -1,10 +1,10 @@
 @font-face {
   font-family: "NanumSquareNeo";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 a {
   text-decoration: none;
   color: black;
@@ -17,12 +17,13 @@ a {
 
 .header {
   /* background-color: aqua; */
-  height: 10vh;
+  height: 15vh;
   border-bottom: 3px solid #9f9b9b;
 }
+
 .body {
   /* background-color: beige; */
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -51,17 +52,33 @@ a {
 h1 {
   font-style: normal;
   font-weight: 400;
-  line-height: 10vh;
+  line-height: 15vh;
   text-align: center;
   color: #58595b;
+  font-size: 55px;
 }
 
 em {
-  color: #3dcf92;
   font-style: normal;
 }
+<<<<<<< HEAD
 #univ {
   color: #e60000;
+=======
+
+#univ {
+  color: #e60000;
+  background-image: url(../static/emblem.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#map {
+  color: #3dcf92;
+  background-image: url(../static/map_bg.png);
+  background-size: 110% 100%;
+  object-fit: cover;
+>>>>>>> bc40fef284787ae0d77508c076228c8d6e85adca
 }
 
 .searchform {
@@ -70,9 +87,10 @@ em {
   justify-content: center;
   align-items: center;
 }
+
 .search-bar {
   width: 16vw;
-  height: 6.5vh;
+  height: 6vh;
   /* width: 300px;
       height: 66px; */
 }
@@ -80,16 +98,24 @@ em {
 .form-control {
   background: #d9d9d9;
   border-radius: 10px;
-  margin-left: 3%;
+  align-items: center;
+  text-align: left;
 }
+
 .category {
   height: 85%;
   /* border: 2px solid black; */
 }
+
 #static_background {
   position: relative;
   width: 1150px;
   height: 700px;
   left: 3%;
+<<<<<<< HEAD
   top: 10%;
 }
+=======
+  top: 4%;
+}
+>>>>>>> bc40fef284787ae0d77508c076228c8d6e85adca

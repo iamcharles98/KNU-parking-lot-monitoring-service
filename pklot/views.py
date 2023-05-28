@@ -48,7 +48,7 @@ def detail4_D(request):
 
 
 def detail4_H(request):
-    return render(request, 'detail4_H.html')
+    return render(request, 'detail4_H.html',{'colors':0})
 
 
 def detail4_G(request):
