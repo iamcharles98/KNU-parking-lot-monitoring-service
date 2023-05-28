@@ -43,11 +43,16 @@
     position: absolute;
     width: 1079px;
     height: 664px;
-    left: 217px;
+    left: 15%;
     top: 17%;
     mix-blend-mode: normal;
     border-radius: 10px;
     align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 #check_text {
@@ -63,7 +68,6 @@
     font-size: 35px;
     line-height: 39px;
     /* identical to box height */
-    color: #ffffff;
     z-index: 0;
 }
 
@@ -71,8 +75,8 @@
     position: absolute;
     width: 229px;
     height: 85px;
-    left: 642px;
-    top: 542px;
+    left: 43%;
+    top: 50%;
 
     background: rgba(253, 7, 7, 0.5);
     border-radius: 20px;

@@ -1,13 +1,13 @@
-.item > ul {
+.item>ul {
   /* border: 1px solid black; */
   display: none;
 }
 
-.item > ul > li {
+.item>ul>li {
   padding: 1%;
 }
 
-.item:hover > ul {
+.item:hover>ul {
   display: block;
 }
 
@@ -33,12 +33,12 @@
 }
 
 ul {
-  padding: 10%;
+  padding: 5%;
   list-style: none;
   letter-spacing: 0.05em;
 }
 
-ul > li {
+ul>li {
   text-align: center;
 }
 
@@ -65,18 +65,18 @@ ul > li {
   flex-direction: row;
 }
 
-.container1 > .box,
-.container2 > .box,
-.container8 > .box {
+.container1>.box,
+.container2>.box,
+.container8>.box {
   width: 60px;
   height: 48px;
 }
 
-.container3 > .box,
-.container4 > .box,
-.container5 > .box,
-.container6 > .box,
-.container7 > .box {
+.container3>.box,
+.container4>.box,
+.container5>.box,
+.container6>.box,
+.container7>.box {
   width: 48px;
   height: 60px;
 }
