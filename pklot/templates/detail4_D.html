@@ -62,176 +62,72 @@
 
 {% block content %}
   <div id="background">
-<<<<<<< HEAD
 
-    <!DOCTYPE html>
-    <html lang="en">
+    {% comment %} IT 3호관 : 415 {% endcomment %}
+    <div class='container1'>
+      <div class="box" id="1" style="background: {{location_info_415.1.1}}"></div>
+      <div class="box" id="2" style="background: {{location_info_415.2.1}}"></div>
+      <div class="box" id="3" style="background: {{location_info_415.3.1}}"></div>
+      <div class="box" id="4" style="background: {{location_info_415.4.1}}"></div>
+      <div class="box" id="5" style="background: {{location_info_415.5.1}}"></div>
+      <div class="box" id="6" style="background: {{location_info_415.6.1}}"></div>
+      
 
-      <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="../static/css/test.css" type="text/css"/>
-        <title>Document</title>
-      </head>
+    </div>
 
-      <body>
+    <div class='container2'>
+      <div class="box" id="7" style="background: {{location_info_415.7.1}}"></div>
+      <div class="box" id="8" style="background: {{location_info_415.8.1}}"></div>
+      <div class="box" id="9" style="background: {{location_info_415.9.1}}"></div>
+      <div class="box" id="10" style="background: {{location_info_415.10.1}}"></div>
+      <div class="box" id="11" style="background: {{location_info_415.11.1}}"></div>
+      <div class="box" id="12" style="background: {{location_info_415.12.1}}"></div>
+      
+    </div>
+    
 
-        <h3>{{location_info.0.1}}</h3>
+    <div class='container3'>
+      <div class="box" id="13" style="background: {{location_info_415.13.1}}"></div>
+      <div class="box" id="14" style="background: {{location_info_415.14.1}}"></div>
+      <div class="box" id="15" style="background: {{location_info_415.15.1}}"></div>
+      <div class="box" id="16" style="background: {{location_info_415.16.1}}"></div>
+    </div>
 
-        <div class="container0">
+{% comment %} IT 2호관 : 416 {% endcomment %}
+    <div class='container4'>
+      <div class="box" id="16" style="background: {{location_info_416.16.1}}"></div>
+      <div class="box" id="17" style="background: {{location_info_416.17.1}}"></div>
+      <div class="box" id="18" style="background: {{location_info_416.18.1}}"></div>
+      <div class="box" id="19" style="background: {{location_info_416.19.1}}"></div>
+      <div class="box" id="20" style="background: {{location_info_416.20.1}}"></div>
+      <div class="box" id="21" style="background: {{location_info_416.21.1}}"></div>
+    </div>
+    
 
-          <script language="javascript" type="text/javascript">
-            for (i = 1; i <= {{location_info | length}}; i++) {
-                    var col = {{location_info.0}}
-                    console.log(col)
-                    document.write("<div class='box' id =" + i + " style='background:" + col +"'"+ "></div>");
-                    }
-            </script>
+    <div class='container5'>
+      <div class="box" id="1" style="background: {{location_info_416.1.1}}"></div>
+      <div class="box" id="2" style="background: {{location_info_416.2.1}}"></div>
+      <div class="box" id="3" style="background: {{location_info_416.3.1}}"></div>
+      <div class="box" id="4" style="background: {{location_info_416.4.1}}"></div>
+      <div class="box" id="5" style="background: {{location_info_416.5.1}}"></div>
+      <div class="box" id="6" style="background: {{location_info_416.6.1}}"></div>
+    </div>
+    
 
-        </div>
+    <div class='container6'>
+      <div class="box" id="7" style="background: {{location_info_416.7.1}}"></div>
+      <div class="box" id="8" style="background: {{location_info_416.8.1}}"></div>
+      <div class="box" id="9" style="background: {{location_info_416.9.1}}"></div>
+      <div class="box" id="10" style="background: {{location_info_416.10.1}}"></div>
+      <div class="box" id="11" style="background: {{location_info_416.11.1}}"></div>
+      <div class="box" id="12" style="background: {{location_info_416.12.1}}"></div>
+      <div class="box" id="13" style="background: {{location_info_416.13.1}}"></div>
+      <div class="box" id="14" style="background: {{location_info_416.14.1}}"></div>
+      <div class="box" id="15" style="background: {{location_info_416.15.1}}"></div>
+      
+    </div>
+    
 
-
-        <script language="javascript" type="text/javascript">
-            {
-                % comment %
-            }
-            const element; {
-                % endcomment %
-            } {
-                %
-                for location in location_info %
-            } {
-                % comment %
-            }
-            element = document.getElementById({
-                {
-                    location .0
-                }
-            }) {
-                % endcomment %
-            }
-            document.getElementById({
-                {
-                    location .0
-                }
-            }).style.background = "blue" {
-                % endfor %
-            }
-        </script>
-
-
-
-
-
-        <div class="container1">
-            <script language="javascript" type="text/javascript">
-                for (i = 1; i <= 5; i++) {
-                    document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-                }
-            </script>
-
-        </div>
-
-
-        <div class="container2">
-            <script language="javascript" type="text/javascript">
-                for (i = 1; i <= 6; i++) {
-                    document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-                }
-            </script>
-            {% comment %} <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div> {% endcomment %}
-        </div>
-
-        <div class="container3">
-            <script language="javascript" type="text/javascript">
-                for (i = 1; i <= 6; i++) {
-                    document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-                }
-            </script>
-        </div>
-
-        <div class="container4">
-            <script language="javascript" type="text/javascript">
-                for (i = 1; i <= 4; i++) {
-                    document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-                }
-            </script>
-
-        </div>
-
-        <div class="container5">
-            <script language="javascript" type="text/javascript">
-                for (i = 1; i <= 9; i++) {
-                    document.write("<div class='box' id =" + i + " style='background: #ffffff'></div>");
-                }
-            </script>
-
-            {% comment %} <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div> {% endcomment %}
-        </div>
-    </body>
-
-    </html>
-
-</div>
-=======
-    <script language="javascript" type="text/javascript">
-      // container 1
-      document.write("<div class='container1'>")
-      for (i = 1; i < 7; i++){
-        document.write(" <div class='box' id =4150" +i+ " >container1</div>");
-      }
-      document.write("</div>")
-      // container 2
-      document.write("<div class='container2'>")
-      for (i = 6; i < 10; i++){
-        document.write(" <div class='box' id =4150" +i+ " >container2</div>");
-      }
-      document.write(" <div class='box' id = 41510 >container2</div>")
-      document.write(" <div class='box' id = 41511>container2</div>")
-      document.write("</div>")
-      // container 3
-      document.write("<div class='container3'>")
-      for (i = 11; i < 15; i++){
-        document.write(" <div class='box' id =415" +i+ " >container3</div>");
-      }
-      document.write("</div>")
-      // container 4
-      document.write("<div class='container4'>")
-      for (i = 15; i < 21; i++){
-        document.write(" <div class='box' id =415" +i+ " >container4</div>");
-      }
-      document.write("</div>")
-      // container 5
-      document.write("<div class='container5'>")
-      for (i = 1; i < 7; i++){
-        document.write(" <div class='box' id =4160" +i+ " >container5</div>");
-      }
-      document.write("</div>")
-      // container 6
-      document.write("<div class='container6'>")
-      document.write(" <div class='box' id = 41607 >container6</div>");
-      document.write(" <div class='box' id = 41608>container6</div>");
-      document.write(" <div class='box' id = 41609>container6</div>");
-      for (i = 10; i < 16; i++){
-        document.write(" <div class='box' id =" +i+ " >container6</div>");
-      }
-      document.write("</div>")
-    </script>
   </div>
->>>>>>> 278e56c10e8e42df08db23cfbc3a91f4431839b5
 
 {% endblock %}

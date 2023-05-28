@@ -62,23 +62,34 @@
 
 {% block content %}
   <div id="background">
-    <script language="javascript" type="text/javascript">
-      document.write("<div class='container1'>")
-      for (i = 1; i < 11; i++) {
-        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container2'>")
-      for (i = 11; i < 15; i++) {
-        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-      }
-      document.write("</div>")
-      document.write("<div class='container3'>")
-      for (i = 15; i < 18; i++) {
-        document.write(" <div class='box' id =" + i + " > box"+i+"</div>");
-      }
-      document.write("</div>")
-    </script>
+    <div class='container1'>
+      <div class="box" id="1" style="background: {{location_info_417.1.1}}"></div>
+      <div class="box" id="2" style="background: {{location_info_417.2.1}}"></div>
+      <div class="box" id="3" style="background: {{location_info_417.3.1}}"></div>
+      <div class="box" id="4" style="background: {{location_info_417.4.1}}"></div>
+      <div class="box" id="5" style="background: {{location_info_417.5.1}}"></div>
+      <div class="box" id="6" style="background: {{location_info_417.6.1}}"></div>
+      <div class="box" id="7" style="background: {{location_info_417.7.1}}"></div>
+      <div class="box" id="8" style="background: {{location_info_417.8.1}}"></div>
+      <div class="box" id="9" style="background: {{location_info_417.9.1}}"></div>
+      <div class="box" id="10" style="background: {{location_info_417.10.1}}"></div>
+
+    </div>
+
+    <div class='container2'>
+      <div class="box" id="14" style="background: {{location_info_417.14.1}}"></div>
+      <div class="box" id="13" style="background: {{location_info_417.13.1}}"></div>
+      <div class="box" id="12" style="background: {{location_info_417.12.1}}"></div>
+      <div class="box" id="11" style="background: {{location_info_417.11.1}}"></div>
+    </div>
+
+    <div class='container3'>
+      <div class="box" id="15" style="background: {{location_info_417.15.1}}"></div>
+      <div class="box" id="16" style="background: {{location_info_417.16.1}}"></div>
+      <div class="box" id="17" style="background: {{location_info_417.17.1}}"></div>
+
+    </div>
+
   </div>
 
 {% endblock %}

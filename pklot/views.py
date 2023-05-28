@@ -63,9 +63,11 @@ def detail4_D(request):
             dict[location.get('building_num')] = [(location.get('pk_area'), color)]
         else:
             dict[location.get('building_num')].append((location.get('pk_area'),color))
-    print(dict.get(416))
+    print("416 건물 정보는 :", dict.get(416))
+    print("\n")
+    print("415 건물 정보는 :", dict.get(415))
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
-    return render(request, 'detail4_D.html',{'location_info_417':dict.get(416),'test':1})
+    return render(request, 'detail4_D.html',{'location_info_416':dict.get(416),'location_info_415':dict.get(415),})
 
 
 
@@ -78,7 +80,27 @@ def detail4_G(request):
 
 
 def detail4_F(request):
-    return render(request, 'detail4_F.html')
+    # 4구역 F에 속하는 빌딩들 : 417
+    dict = {}
+    sector_id = 4
+    subsector_id = 'D' # 원래는 F 가 맞음
+    color = GREEN
+    location_list = utils.get_subsector(sector_id, subsector_id)
+    # data => [building_num, pk_area, empty]
+    for location in location_list:
+        if location.get('empty'):
+               color = GREEN
+        else:
+           color = RED
+        if location.get('building_num') not in dict:
+            dict[location.get('building_num')] = [(location.get('pk_area'), color)]
+        else:
+            dict[location.get('building_num')].append((location.get('pk_area'),color))
+    print("417 건물 정보는 :", dict.get(417))
+    print('\n')
+    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
+    return render(request, 'detail4_F.html',{'location_info_417':dict.get(417),})
+     
 
 
 # 필요하지않은  구역에 대해서 리턴 되는 함수
