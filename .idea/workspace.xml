@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c6fd3e6-6f1d-4a70-bdc2-6dc8ae05cb66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/415/415.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/415/415.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/416/416.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/data/images/416/416.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/415.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/labels/415.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/416.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/labels/416.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/417/result/417.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/417/result/labels/417.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pklot/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pklot/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pklot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pklot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/415.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/415/result/415.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/416.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/YOLO_model/yolov5/runs/detect/416/result/416.jpeg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682931120713</updated>
       <workItem from="1682931122648" duration="34179000" />
-      <workItem from="1684240286454" duration="81264000" />
+      <workItem from="1684240286454" duration="81959000" />
     </task>
     <servers />
   </component>
