@@ -3,6 +3,8 @@ from django.utils import timezone
 from pklot import utils
 
 
+RED= '#F38282'
+GREEN = '#aB0EF99'
 # Create your views here.
 
 # Create your views here.
@@ -24,26 +26,46 @@ def section_4(request):
         else:
             dict[data.get('sub_sector')] += data.get('pk_count')
 
-    dict2={'A':3,'C':5,'D':1,"B":8}
-    dict2 = sorted(list(zip(dict2.keys(), dict2.values())), key=lambda x: x[0])
-    
-    return render(request, 'section_4.html',{'sub_sector':dict2,'color':'#58595B'})
+    sub_a = dict.get('A')
+    sub_b = dict.get('B')
+    sub_c = dict.get('C')
+    sub_d = dict.get('D')
+    sub_e = dict.get('E')
+    sub_f = dict.get('F')
+    sub_g = dict.get('G')
+    sub_h = dict.get('H')
+    print(dict)
+    return render(request, 'section_4.html',{'sub_sector_a':sub_a,
+                                             'sub_sector_b':sub_b,
+                                             'sub_sector_c':sub_c,
+                                             'sub_sector_d':sub_d,
+                                             'sub_sector_e':sub_e,
+                                             'sub_sector_f':sub_f,
+                                             'sub_sector_g':sub_g,
+                                             'sub_sector_h':sub_h, 
+                                             'color':'#58595B'})
 
 
 def detail4_D(request):
-    # 4구역 D에 속하는 빌딩들 : 415, 416, 417
+    # 4구역 D에 속하는 빌딩들 : 415, 416
     dict = {}
     sector_id = 4
     subsector_id = 'D'
+    color = GREEN
     location_list = utils.get_subsector(sector_id, subsector_id)
     # data => [building_num, pk_area, empty]
     for location in location_list:
-        if location.get('building_num') not in dict:
-            dict[location.get('building_num')] = [(location.get('pk_area'), location.get('empty'))]
+        if location.get('empty'):
+               color = GREEN
         else:
-            dict[location.get('building_num')].append((location.get('pk_area'), location.get('empty')))
+           color = RED
+        if location.get('building_num') not in dict:
+            dict[location.get('building_num')] = [(location.get('pk_area'), color)]
+        else:
+            dict[location.get('building_num')].append((location.get('pk_area'),color))
+    print(dict.get(416))
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
-    return render(request, 'detail4_D.html')
+    return render(request, 'detail4_D.html',{'location_info_417':dict.get(416),'test':1})
 
 
 
