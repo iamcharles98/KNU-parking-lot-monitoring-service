@@ -1,13 +1,13 @@
-.item > ul {
+.item>ul {
   /* border: 1px solid black; */
   display: none;
 }
 
-.item > ul > li {
+.item>ul>li {
   padding: 1%;
 }
 
-.item:hover > ul {
+.item:hover>ul {
   display: block;
 }
 
@@ -38,7 +38,7 @@ ul {
   letter-spacing: 0.05em;
 }
 
-ul > li {
+ul>li {
   text-align: center;
 }
 
@@ -63,16 +63,16 @@ ul > li {
   flex-direction: row;
 }
 
-.container1 > .box,
-.container2 > .box,
-.container3 > .box,
-.container6 > .box {
+.container1>.box,
+.container2>.box,
+.container3>.box,
+.container6>.box {
   width: 60px;
   height: 48px;
 }
 
-.container4 > .box,
-.container5 > .box {
+.container4>.box,
+.container5>.box {
   width: 48px;
   height: 60px;
 }
@@ -100,17 +100,17 @@ ul > li {
   height: 568px;
   justify-content: space-between;
   position: absolute;
-  top: 18.5%;
-  left: 40.5%;
+  top: 18%;
+  left: 33%;
 }
 
 .container4 {
-  width: 204px;
+  width: 308px;
   height: 60px;
   justify-content: space-between;
   position: absolute;
   top: 19.5%;
-  left: 48.4%;
+  left: 39.5%;
 }
 
 .container5 {
@@ -118,8 +118,8 @@ ul > li {
   height: 60px;
   justify-content: space-between;
   position: absolute;
-  top: 86.6%;
-  left: 48.4%;
+  top: 87.3%;
+  left: 44.2%;
 }
 
 .container6 {
