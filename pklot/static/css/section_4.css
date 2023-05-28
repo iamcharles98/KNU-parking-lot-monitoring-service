@@ -1,0 +1,92 @@
+.item > ul {
+  /* border: 1px solid black; */
+  display: none;
+}
+.item > ul > li {
+  padding: 1%;
+}
+
+.item:hover > ul {
+  display: block;
+}
+#item_4_a {
+  text-decoration: underline 2px #e60000;
+}
+
+#item_4 {
+  display: block;
+}
+
+.item {
+  text-align: center;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+ul {
+  padding: 10%;
+  list-style: none;
+  letter-spacing: 0.05em;
+}
+ul > li {
+  text-align: center;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../images/bg_section4.png);
+}
+
+#section_A,
+#section_B,
+#section_C,
+#section_D,
+#section_E,
+#section_F,
+#section_G,
+#section_H {
+  position: relative;
+}
+
+#section_A {
+  top: 18%;
+  left: 0%;
+}
+
+#section_B {
+  top: 56.6%;
+  left: -21.5%;
+}
+#section_C {
+  top: 31%;
+  left: -23%;
+}
+#section_D {
+  top: 19%;
+  left: -23%;
+}
+#section_E {
+  top: 9%;
+  left: 56%;
+}
+#section_F {
+  top: -23%;
+  left: 55%;
+}
+#section_G {
+  top: -3.5%;
+  left: 41.5%;
+}
+#section_H {
+  top: 6%;
+  left: 34%;
+}

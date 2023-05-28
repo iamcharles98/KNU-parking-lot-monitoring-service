@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/detail4_F.css' %}" type="text/css">
+{% endblock %}
+
+{% block nav %}
+  <ul>
+    <li class="item">
+      <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
+      <ul>
+        <li>A 구역</li>
+        <li>B 구역</li>
+        <li>C 구역</li>
+        <li>D 구역</li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
+      <ul>
+        <li>A 구역</li>
+        <li>B 구역</li>
+        <li>C 구역</li>
+        <li>D 구역</li>
+      </ul>
+    </li>
+    <li class="item">
+      <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
+      <ul>
+        <li>A 구역</li>
+        <li>B 구역</li>
+        <li>C 구역</li>
+        <li>D 구역</li>
+      </ul>
+    </li>
+    <li class="item">
+      <a id="item_4_a" href="{% url 'section_4' %}">📍 4 구역 ></a>
+      <ul id="item_4">
+        <li>A 구역</li>
+        <li>B 구역</li>
+        <li>C 구역</li>
+        <li>D 구역</li>
+        <li>E 구역</li>
+        <li>F 구역</li>
+        <li>G 구역</li>
+      </ul>
+    </li>
+    <li class="item">
+
+      <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
+      <ul>
+        <li>A 구역</li>
+        <li>B 구역</li>
+        <li>C 구역</li>
+        <li>D 구역</li>
+      </ul>
+    </li>
+  </ul>
+
+{% endblock %}
+
+{% block content %}
+  <div id="background">
+    <div class='container1'>
+      <div class="box" id="1" style="background: {{location_info_417.1.1}}"></div>
+      <div class="box" id="2" style="background: {{location_info_417.2.1}}"></div>
+      <div class="box" id="3" style="background: {{location_info_417.3.1}}"></div>
+      <div class="box" id="4" style="background: {{location_info_417.4.1}}"></div>
+      <div class="box" id="5" style="background: {{location_info_417.5.1}}"></div>
+      <div class="box" id="6" style="background: {{location_info_417.6.1}}"></div>
+      <div class="box" id="7" style="background: {{location_info_417.7.1}}"></div>
+      <div class="box" id="8" style="background: {{location_info_417.8.1}}"></div>
+      <div class="box" id="9" style="background: {{location_info_417.9.1}}"></div>
+      <div class="box" id="10" style="background: {{location_info_417.10.1}}"></div>
+
+    </div>
+
+    <div class='container2'>
+      <div class="box" id="14" style="background: {{location_info_417.14.1}}"></div>
+      <div class="box" id="13" style="background: {{location_info_417.13.1}}"></div>
+      <div class="box" id="12" style="background: {{location_info_417.12.1}}"></div>
+      <div class="box" id="11" style="background: {{location_info_417.11.1}}"></div>
+    </div>
+
+    <div class='container3'>
+      <div class="box" id="15" style="background: {{location_info_417.15.1}}"></div>
+      <div class="box" id="16" style="background: {{location_info_417.16.1}}"></div>
+      <div class="box" id="17" style="background: {{location_info_417.17.1}}"></div>
+
+    </div>
+
+  </div>
+
+{% endblock %}
