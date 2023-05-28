@@ -1,3 +1,17 @@
+#info {
+  font-size: large;
+  background: #ffffffb3;
+  width: fit-content;
+}
+
+#green {
+  color: #8dc07b;
+}
+
+#red {
+  color: #F38282;
+}
+
 .item>ul {
   /* border: 1px solid black; */
   display: none;
@@ -33,7 +47,7 @@
 }
 
 ul {
-  padding: 10%;
+  padding: 5%;
   list-style: none;
   letter-spacing: 0.05em;
 }

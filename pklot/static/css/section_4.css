@@ -1,14 +1,16 @@
-.item > ul {
+.item>ul {
   /* border: 1px solid black; */
   display: none;
 }
-.item > ul > li {
+
+.item>ul>li {
   padding: 1%;
 }
 
-.item:hover > ul {
+.item:hover>ul {
   display: block;
 }
+
 #item_4_a {
   text-decoration: underline 2px #e60000;
 }
@@ -31,11 +33,12 @@
 }
 
 ul {
-  padding: 10%;
+  padding: 5%;
   list-style: none;
   letter-spacing: 0.05em;
 }
-ul > li {
+
+ul>li {
   text-align: center;
 }
 
@@ -66,27 +69,34 @@ ul > li {
   top: 56.6%;
   left: -21.5%;
 }
+
 #section_C {
   top: 31%;
-  left: -23%;
+  left: -21.5%;
 }
+
 #section_D {
   top: 19%;
-  left: -23%;
+  left: -20.5%;
 }
+
 #section_E {
   top: 9%;
   left: 56%;
 }
+
 #section_F {
+  zoom: 90%;
   top: -23%;
-  left: 55%;
+  left: 54%;
 }
+
 #section_G {
   top: -3.5%;
-  left: 41.5%;
+  left: 41%;
 }
+
 #section_H {
   top: 6%;
-  left: 34%;
+  left: 33.5%;
 }

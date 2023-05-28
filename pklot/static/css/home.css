@@ -1,9 +1,9 @@
-.item > ul {
+.item>ul {
   /* border: 1px solid black; */
   display: none;
 }
 
-.item:hover > ul {
+.item:hover>ul {
   display: block;
   animation-duration: 5ms;
 }
@@ -20,12 +20,14 @@
   text-align: center;
   letter-spacing: 0.05em;
 }
+
 ul {
   padding: 10%;
   list-style: none;
   letter-spacing: 0.05em;
 }
-ul > li {
+
+ul>li {
   text-align: center;
 }
 
@@ -51,19 +53,23 @@ ul > li {
   top: 1%;
   left: 45%;
 }
+
 #section_2 {
   top: 28%;
   left: -10.5%;
 }
+
 #section_3 {
   top: 28%;
   left: -4.5%;
 }
+
 #section_4 {
   top: 1%;
   left: 36%;
 }
+
 #section_5 {
-  top: 11%;
-  left: 6%;
+  top: 10.5%;
+  left: 5.5%;
 }
