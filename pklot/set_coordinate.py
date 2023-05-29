@@ -159,8 +159,14 @@ def initDB():
 
 def calc_coordinate(building_num, n, dot_info):
     if building_num == 415:
-        width = 1280
-        height = 1280
+        width = 1278
+        height = 1278
+    elif building_num == 420:
+        width = 3019
+        height = 4027
+    elif building_num == 416:
+        width = 4028
+        height = 3020
     else:
         width = 4032  # width 가 x 좌표
         height = 3024  # height 이 y 좌표
