@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+{% endblock %}
+
+
+{% block nav %}
+<ul>
+  <li class="item">
+    <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 2 %}">📍 2 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 3 %}">📍 3 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'section_4' %}">📍 4 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+      <li>E 구역</li>
+      <li>F 구역</li>
+      <li>G 구역</li>
+    </ul>
+  </li>
+  <li class="item">
+    <a href="{% url 'temp' 5  %}">📍 5 구역 ></a>
+    <ul>
+      <li>A 구역</li>
+      <li>B 구역</li>
+      <li>C 구역</li>
+      <li>D 구역</li>
+    </ul>
+  </li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+
+    
+  
+    <div id="background">
+      <a href="{% url 'section_4' %}"> 
+        <img id= "section_1" src="{% static 'images/section/section_1.png' %}" >
+      </a>
+
+      <a href="{% url 'section_4' %}"> 
+        <img id= "section_2" src="{% static 'images/section/section_2.png' %}" >
+      </a>
+
+      <a href="{% url 'section_4' %}"> 
+        <img id= "section_3" src="{% static 'images/section/section_3.png' %}">
+      </a>
+
+      <a href="{% url 'section_4' %}"> 
+        <img id= "section_4" src="{% static 'images/section/section_4.png' %}" >
+      </a>
+
+      <a href="{% url 'section_4' %}"> 
+        <img id= "section_5" src="{% static 'images/section/section_5.png' %}" >
+      </a>
+
+
+      
+    
+      
+      {% comment %} <img src="{% static 'images/background.png' %}" style="opacity: 0.7;">
+      <img src="{% static 'images/Polygon_10.png' %}" style="opacity: 0.7;"> {% endcomment %}
+  
+    </div>
+
+
+  
+
+
+
+{% endblock %}

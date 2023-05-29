@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 def job():
     #TODO: DB 에서 가져오기
-    building_list = [416, 417]
+    building_list = [415, 416, 417]
 
     for bnum in building_list:
         views.execute_detect_py(bnum)
@@ -19,7 +19,7 @@ def job():
         utils.change_file(bnum)
 
         # 중심점
-        if bnum == 417:
+        if bnum == 415 or bnum == 417:
             # 결과파일
             utils.update_pklocation(utils.read_rows_from_file(result_path), bnum)
         elif bnum == 416:

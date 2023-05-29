@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+  height: 180px;
+  border: solid 2px red;
+  /* background: #643bff; */
+}
+.sub_top {
+  width: 200px;
+  height: 90px;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  border: solid 2px blue;
+  /* background: #17750f; */
+}
+
+.sub_bottom {
+  width: 200px;
+  height: 90px;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  border: solid 2px pink;
+  /* background: #75670f; */
+}
+
+.box {
+  flex: 2;
+  /* background: #d2cfe0; */
+
+  /* width: 40px;
+  height: 90px; */
+  /* background: #75670f; */
+  border: black 0.5px solid;
+}

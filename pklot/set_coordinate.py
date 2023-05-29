@@ -22,7 +22,7 @@ def initDB():
         chip_dot_info_15_17[i] = [(x_dot[0][0], y_dot[0][1]), (x_dot[-1][0], y_dot[-1][1])]
 
     chip_dot_info = chip_dot_info_1_14 + chip_dot_info_15_17
-    center_dot, wid, hei = calc_coordinate(chip_N, chip_dot_info)
+    center_dot, wid, hei = calc_coordinate(417, chip_N, chip_dot_info)
 
 
     if not models.Building.objects.filter(building_num=417).exists():
@@ -57,25 +57,7 @@ def initDB():
     center_dot.clear()
     wid.clear()
     hei.clear()
-    center_dot, wid, hei = calc_coordinate(it2_N, it2_dot_info_1_15)
-    # for i in range(0, it2_N + 1):
-    #     ctr_x = round((it2_dot_info_1_15[i][0][0] + it2_dot_info_1_15[i][1][0]) / 2, 3)
-    #     ctr_y = round((it2_dot_info_1_15[i][0][1] + it2_dot_info_1_15[i][1][1]) / 2, 3)
-    #     x_ratio = round(ctr_x / width, 6)  # rouond : 반올림해서 6번째 자리까지 나타냄
-    #     y_ratio = round(ctr_y / height, 6)
-    #     center_dot.append((x_ratio, y_ratio))
-    #
-    # for i in range(0, it2_N + 1):
-    #     min_x = it2_dot_info_1_15[i][1][0]
-    #     max_x = it2_dot_info_1_15[i][0][0]
-    #     min_y = it2_dot_info_1_15[i][1][1]
-    #     max_y = it2_dot_info_1_15[i][0][1]
-    #     w = max_x - min_x if min_x <= max_x else min_x - max_x
-    #     h = max_y - min_y if min_y <= max_y else min_y - max_y
-    #     w_ratio = round(w / width, 6)
-    #     h_ratio = round(h / height, 6)
-    #     wid.append(w_ratio)
-    #     hei.append(h_ratio)
+    center_dot, wid, hei = calc_coordinate(416, it2_N, it2_dot_info_1_15)
 
     if not models.Building.objects.filter(building_num=416).exists():
         models.Building(
@@ -106,7 +88,7 @@ def initDB():
     center_dot.clear()
     wid.clear()
     hei.clear()
-    center_dot, wid, hei = calc_coordinate(it5_N, it5_dot_info)
+    center_dot, wid, hei = calc_coordinate(415, it5_N, it5_dot_info)
 
     if not models.Building.objects.filter(building_num=415).exists():
         models.Building(
@@ -131,9 +113,14 @@ def initDB():
             ).save()
 
 
-def calc_coordinate(n, dot_info):
-    width = 4032  # width 가 x 좌표
-    height = 3024  # height 이 y 좌표
+def calc_coordinate(building_num, n, dot_info):
+    if building_num == 415:
+        width = 1280
+        height = 1280
+    else:
+        width = 4032  # width 가 x 좌표
+        height = 3024  # height 이 y 좌표
+
     center_dot = []
     wid = []
     hei = []

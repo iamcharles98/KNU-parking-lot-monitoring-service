@@ -1,0 +1,97 @@
+.item > ul {
+  /* border: 1px solid black; */
+  display: none;
+}
+
+.item > ul > li {
+  padding: 1%;
+}
+
+.item:hover > ul {
+  display: block;
+}
+
+#item_4_a {
+  text-decoration: underline 2px #e60000;
+}
+
+#item_4 {
+  display: block;
+}
+
+.item {
+  text-align: center;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+ul {
+  padding: 10%;
+  list-style: none;
+  letter-spacing: 0.05em;
+}
+
+ul > li {
+  text-align: center;
+}
+
+#background {
+  background-size: cover;
+  background-image: url(../images/area/Area_F.png);
+  width: 100%;
+  height: 100%;
+}
+
+.container1,
+.container2,
+.container3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.container1 > .box,
+.container2 > .box,
+.container3 > .box {
+  width: 60px;
+  height: 48px;
+}
+
+.container1 {
+  width: 60px;
+  height: 516px;
+  justify-content: space-between;
+  position: absolute;
+  top: 25%;
+  left: 28.2%;
+}
+
+.container2 {
+  width: 60px;
+  height: 204px;
+  justify-content: space-between;
+  position: absolute;
+  top: 69%;
+  left: 52.2%;
+}
+
+.container3 {
+  width: 60px;
+  height: 152px;
+  justify-content: space-between;
+  position: absolute;
+  top: 44.5%;
+  left: 78.2%;
+  transform: rotate(-45deg);
+}
+
+.box {
+  border: pink 1px solid;
+  opacity: 0.5;
+}

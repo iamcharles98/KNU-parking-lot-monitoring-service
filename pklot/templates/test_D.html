@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/test_D.css" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+
+      {% comment %} {{location_info}} {% endcomment %}
+      {% comment %} {% for location in location_info %} 
+        
+
+      {% endfor %} {% endcomment %}
+      <div class="sub_top">
+        <div class="box" style="background: #e02f2f"></div>
+        <div class="box" id="1" style="background: {{location_info_.0.1}}"></div>
+        <div class="box" id="2" style="background: {{location_info.5.1}}"></div>
+        <div class="box" id="3" style="background:{{location_info.5.1}}"></div>
+        <div class="box" id="4" style="background: {{location_info.5.1}}"></div>
+        <div class="box" id="5" style="background: {{location_info.5.1}}"></div>
+        <div class="box" id ="6" style="background: {{location_info.5.1}}"></div>
+        <div class="box" id = style="background: {{location_info.5.1}}"></div>
+        <div class="box" id = style="background: {{location_info.5.1}}"></div>
+        <div class="box" id = style="background: {{location_info.5.1}}"></div>
+        <div class="box" id = style="background: {{location_info.5.1}}"></div>
+      </div>
+      <div class="sub_bottom">
+        <div class="box"></div>
+        <div class="box" style="background: #c18888"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
