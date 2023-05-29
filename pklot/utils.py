@@ -33,9 +33,12 @@ def update_pklocation(result, num):
     building = get_object_or_404(Building, building_num=num)
 
     if location_set.count() == 0:
+        print("CHECK")
         return Http404("Building_num is Wrong")
     else:
+        print("CHECK2")
         update_list = []
+        update_list2 = []
         for location in location_set:
             Xmin = location.x - location.w / 2
             Xmax = location.x + location.w / 2
@@ -47,10 +50,15 @@ def update_pklocation(result, num):
                 if Xmin <= x <= Xmax and Ymin <= y <= Ymax:
                     location.empty = False
                     update_list.append(location)
+        for location in location_set:
+            if location not in update_list:
+                location.empty = True
+                update_list2.append(location)
 
         building.pk_count = building.pk_size - len(update_list)
         if building.pk_count <= building.pk_size:
             building.save()
+        Pk_location.objects.bulk_update(update_list2, ['empty'])
         Pk_location.objects.bulk_update(update_list, ['empty'])
 
 
@@ -63,6 +71,7 @@ def adjacent_priority_algorithm(result, num):
         return Http404("Building_num is Wrong")
     else:
         update_list = []
+        update_list2 = []
         check = [False for _ in range(building.pk_size + 1)]
         # label[1] : x, label[2] : y, label[3] : w, label[4] : h
         for label in result:
@@ -108,12 +117,16 @@ def adjacent_priority_algorithm(result, num):
                         pk.empty = False
                         update_list.append(pk)
                         break
-
+        for pk in parking_area:
+            if pk not in update_list:
+                pk.empty = True
+                update_list2.append(pk)
         building.pk_count = building.pk_size - len(update_list)
 
         if building.pk_count <= building.pk_size:
             building.save()
 
+        Pk_location.objects.bulk_update(update_list2, ['empty'])
         Pk_location.objects.bulk_update(update_list, ['empty'])
 
 
