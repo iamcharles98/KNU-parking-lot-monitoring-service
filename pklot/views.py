@@ -4,7 +4,7 @@ from pklot import utils
 
 
 RED= '#F38282'
-GREEN = '#aB0EF99'
+GREEN = '#C7FF80'
 # Create your views here.
 
 # Create your views here.
@@ -34,7 +34,10 @@ def section_4(request):
     sub_f = dict.get('F')
     sub_g = dict.get('G')
     sub_h = dict.get('H')
+    '''
+    구역 log
     print(dict)
+    '''
     return render(request, 'section_4.html',{'sub_sector_a':sub_a,
                                              'sub_sector_b':sub_b,
                                              'sub_sector_c':sub_c,
@@ -63,9 +66,12 @@ def detail4_D(request):
             dict[location.get('building_num')] = [(location.get('pk_area'), color)]
         else:
             dict[location.get('building_num')].append((location.get('pk_area'),color))
+    '''
+    건물 정보 log
     print("416 건물 정보는 :", dict.get(416))
     print("\n")
     print("415 건물 정보는 :", dict.get(415))
+    '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
     return render(request, 'detail4_D.html',{'location_info_416':dict.get(416),'location_info_415':dict.get(415),})
 
@@ -89,8 +95,11 @@ def detail4_H(request):
             dict[location.get('building_num')] = [(location.get('pk_area'), color)]
         else:
             dict[location.get('building_num')].append((location.get('pk_area'),color))
+    '''
+    건물 정보 log
     print("420 건물 정보는 :", dict.get(420))
     print('\n')
+    '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
     return render(request, 'detail4_H.html',{'location_info_420':dict.get(420),})
 
@@ -113,8 +122,11 @@ def detail4_G(request):
             dict[location.get('building_num')] = [(location.get('pk_area'), color)]
         else:
             dict[location.get('building_num')].append((location.get('pk_area'),color))
+    '''
+    건물 정보 log 
     print("418 건물 정보는 :", dict.get(418))
     print('\n')
+    '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
     return render(request, 'detail4_G.html',{'location_info_418':dict.get(418),})
    
@@ -137,8 +149,11 @@ def detail4_F(request):
             dict[location.get('building_num')] = [(location.get('pk_area'), color)]
         else:
             dict[location.get('building_num')].append((location.get('pk_area'),color))
+    '''
+    건물 정보 log
     print("417 건물 정보는 :", dict.get(417))
     print('\n')
+    '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
     return render(request, 'detail4_F.html',{'location_info_417':dict.get(417),})
      
