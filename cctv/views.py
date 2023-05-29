@@ -45,37 +45,6 @@ def execute_detect_py(building_num):
 
     return HttpResponse("run!")
 
-# 결과 가져 오기
-def get_result(parking_name):
-    # txt 파일이 있는 경로로 들어가기
-    dir_path = 'YOLO/yolov5/runs/detect/' + parking_name + "/labels"
-
-    try:
-        files = sorted(os.listdir(dir_path))
-        if len(files) > 0:
-            latest_file = files[len(files) - 1]
-            file_path = os.path.join(dir_path, latest_file)
-
-            with open(file_path, 'r') as file:
-                for line in file:
-                    line = line.strip()
-                    value = line.split()
-
-                    # txt 파일 내용 분류
-                    if len(value) == 5:
-                        check = int(value[0])
-                        x = float(value[1])
-                        y = float(value[2])
-                        w = float(value[3])
-                        h = float(value[4])
-                    else:
-                        print("Invalid line format : ", line)
-
-    except FileNotFoundError:
-        print("File not found.")
-    except IOError:
-        print("An error occurred while reading the file.")
-
 
 # detection 전에 이전 디렉토리 삭제하기
 
