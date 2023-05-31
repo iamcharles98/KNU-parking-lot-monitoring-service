@@ -4,7 +4,13 @@
   href="{% static 'css/detail4_H.css' %}"
   type="text/css"
 />
-{% endblock %} {% block nav %}
+{% endblock %}
+
+
+
+{% block updatetime %}최근 업데이트 시간 :{{current_time}} {% endblock %}
+
+{% block nav %}
 <ul>
   <li class="item">
     <a href="{% url 'temp' 1 %}">📍 1 구역 ></a>

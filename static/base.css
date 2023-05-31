@@ -1,9 +1,14 @@
 @font-face {
   font-family: "NanumSquareNeo";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+#update {
+  position: absolute;
+  left: 75%;
+  top: 12%
 }
 
 a {
@@ -107,6 +112,6 @@ em {
   position: relative;
   width: 1150px;
   height: 700px;
-  left: 3%;
-  top: 4%;
+  left: 7%;
+  top: 6%;
 }

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from building.models import Building
 from pklot import utils
 
 
@@ -56,6 +57,7 @@ def detail4_D(request):
     subsector_id = 'D'
     color = GREEN
     location_list = utils.get_subsector(sector_id, subsector_id)
+    building = get_object_or_404(Building, building_num=415)
     # data => [building_num, pk_area, empty]
     for location in location_list:
         if location.get('empty'):
@@ -72,8 +74,8 @@ def detail4_D(request):
     print("\n")
     print("415 건물 정보는 :", dict.get(415))
     '''
-    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
-    return render(request, 'detail4_D.html',{'location_info_416':dict.get(416),'location_info_415':dict.get(415),})
+    #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty) 'current_time':loca
+    return render(request, 'detail4_D.html',{'location_info_416':dict.get(416),'location_info_415':dict.get(415), 'current_time':building.modifiedAt})
 
 
 
@@ -82,10 +84,13 @@ def detail4_H(request):
      # 4구역 H에 속하는 빌딩들 : 420
     dict = {}
     sector_id = 4
-    subsector_id = 'D' # 원래는 F 가 맞음
+    subsector_id = 'H' # 원래는 F 가 맞음
     color = GREEN
     location_list = utils.get_subsector(sector_id, subsector_id)
-    # data => [building_num, pk_area, empty]
+    building = get_object_or_404(Building, building_num=420)
+
+
+# data => [building_num, pk_area, empty]
     for location in location_list:
         if location.get('empty'):
                color = GREEN
@@ -101,7 +106,7 @@ def detail4_H(request):
     print('\n')
     '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
-    return render(request, 'detail4_H.html',{'location_info_420':dict.get(420),})
+    return render(request, 'detail4_H.html',{'location_info_420':dict.get(420),'current_time':building.modifiedAt})
 
 
 
@@ -109,7 +114,7 @@ def detail4_G(request):
      # 4구역 G에 속하는 빌딩들 : 418
     dict = {}
     sector_id = 4
-    subsector_id = 'D' 
+    subsector_id = 'D'
     color = GREEN
     location_list = utils.get_subsector(sector_id, subsector_id)
     # data => [building_num, pk_area, empty]
@@ -136,9 +141,11 @@ def detail4_F(request):
     # 4구역 F에 속하는 빌딩들 : 417
     dict = {}
     sector_id = 4
-    subsector_id = 'D' # 원래는 F 가 맞음
+    subsector_id = 'F' # 원래는 F 가 맞음
     color = GREEN
     location_list = utils.get_subsector(sector_id, subsector_id)
+    building = get_object_or_404(Building, building_num=417)
+
     # data => [building_num, pk_area, empty]
     for location in location_list:
         if location.get('empty'):
@@ -155,7 +162,7 @@ def detail4_F(request):
     print('\n')
     '''
     #dictionary에 담기는 값 => key : building_num /  value : list of 2-tuple(pk_area, empty)
-    return render(request, 'detail4_F.html',{'location_info_417':dict.get(417),})
+    return render(request, 'detail4_F.html',{'location_info_417':dict.get(417),'current_time':building.modifiedAt})
      
 
 
