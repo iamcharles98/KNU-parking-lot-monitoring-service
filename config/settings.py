@@ -17,10 +17,7 @@ from config import my_settings
 import pymysql
 pymysql.install_as_MySQLdb()
 
-
-# import pymysql
-# pymysql.version_info = (1, 0, 2, "final", 0)
-# pymysql.install_as_MySQLdb()
+PROJECT_DIR = os.path.dirname(__file__)
 
 # Build paths inside the prgitoject like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

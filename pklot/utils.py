@@ -33,13 +33,14 @@ def update_pklocation(result, num):
     building = get_object_or_404(Building, building_num=num)
 
     if location_set.count() == 0:
-        print("CHECK")
         return Http404("Building_num is Wrong")
     else:
-        print("CHECK2")
         update_list = []
         update_list2 = []
         for location in location_set:
+            if num == 420 and location.pk_area not in [27, 28, 29, 30, 31, 32]:
+                continue
+
             Xmin = location.x - location.w / 2
             Xmax = location.x + location.w / 2
             Ymin = location.y - location.h / 2
@@ -50,7 +51,11 @@ def update_pklocation(result, num):
                 if Xmin <= x <= Xmax and Ymin <= y <= Ymax:
                     location.empty = False
                     update_list.append(location)
+
         for location in location_set:
+            if num == 420 and location.pk_area not in [27, 28, 29, 30, 31, 32]:
+                continue
+
             if location not in update_list:
                 location.empty = True
                 update_list2.append(location)
@@ -85,6 +90,9 @@ def adjacent_priority_algorithm(result, num):
             temp = []
             # 라벨 안에 포함 되는 주차 구역 구하기
             for pk in parking_area:
+                if num == 420 and pk.pk_area in [27, 28, 29, 30, 31, 32]:
+                    continue
+
                 px, py, pw, ph = pk.x, pk.y, pk.w, pk.h
                 points = [[px + pw / 2, py], [px - pw / 2, py], [px, py + ph / 2], [px, py - ph / 2]]
 
@@ -117,10 +125,15 @@ def adjacent_priority_algorithm(result, num):
                         pk.empty = False
                         update_list.append(pk)
                         break
+
         for pk in parking_area:
+            if num == 420 and pk.pk_area in [27, 28, 29, 30, 31, 32]:
+                continue
+
             if pk not in update_list:
                 pk.empty = True
                 update_list2.append(pk)
+
         building.pk_count = building.pk_size - len(update_list)
 
         if building.pk_count <= building.pk_size:

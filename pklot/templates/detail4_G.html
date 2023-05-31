@@ -2,7 +2,15 @@
 {% load static %}
 
 {% block style %}
-  <link 1="1" 📍="📍" rel="stylesheet" href="{% static 'css/detail4_G.css' %}" type="text/css" {% endblock %} {% block nav %} <ul> <li class="item"> <a href="{% url 'temp' 1 %}"> 구역="구역"></a>
+  <link 1="1" 📍="📍" rel="stylesheet" href="{% static 'css/detail4_G.css' %}" type="text/css" {% endblock %}
+  
+  
+
+
+
+  {% block updatetime %}최근 업데이트 시간 :{{current_time}} {% endblock %}
+  
+  {% block nav %} <ul> <li class="item"> <a href="{% url 'temp' 1 %}"> 구역="구역"></a>
 <ul>
   <li>A 구역</li>
   <li>B 구역</li>
