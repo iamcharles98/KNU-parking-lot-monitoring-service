@@ -42,3 +42,17 @@
 
 
 
+-------
+## Authors
+**Kyungpook-National University Student** 🧑‍💻👩‍💻
+<img src="https://user-images.githubusercontent.com/68631158/144125382-f0fb0165-9eb6-46b7-8448-2a47960db06f.png" width="200px" height="30%" title="px(픽셀) 크기 설정" alt="RubberDuck"></img> </br>
+  - [Leejieon](https://github.com/Leejieon) - **Jieon Lee** 
+  - [Jeongchansoo](https://github.com/iamcharles98) - **Chansoo Jeong**
+  - [Parkjungmin](https://github.com/jungmiinn) - **Jungmin Park**
+  - [Jeongwonjun](https://github.com/wonjunJ) - **Wonjun Jeong** 
+  - [meeeeju](https://github.com/meeeeju) - **Meeju Kim** 
+
+
+
+
+
