@@ -29,8 +29,6 @@
 
 ## 서비스 미리보기 
 
-<img width="846" alt="image" src="https://github.com/meeeeju/KNU-parking-lot-monitoring-service/assets/68631158/8b9bf932-1ffb-4b9f-98c0-ff5a79b4302f">
-
 <img width="992" alt="image" src="https://github.com/meeeeju/KNU-parking-lot-monitoring-service/assets/68631158/b0b659cc-1c98-480d-82b0-c49c3abef29c">
 
 
